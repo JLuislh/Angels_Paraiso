@@ -459,6 +459,7 @@ public class AdDescargasInventario extends javax.swing.JPanel {
         // TODO add your handling code here:
         //PAPA BELCA = 57
         //PAPA NATURAL = 110
+        //SELECT concat(P.DESCRIPCION1,' ',P.DESCRIPCION2) AS PRODUCTO,PD.cantidadout,PRO.DESCRIPCION,PD.unidad_medida FROM angels.productosdescargas PD INNER JOIN productos P ON P.CODIGO = PD.CODIGO JOIN productosinventario PRO ON PRO.idproductosinve = PD.idproductosinve WHERE PD.idproductosinve = 57;
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
