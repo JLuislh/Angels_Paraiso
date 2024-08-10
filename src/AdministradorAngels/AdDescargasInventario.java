@@ -4,9 +4,16 @@
  */
 package AdministradorAngels;
 
+import BDclass.BDConexion;
 import ClassAngels.InsertarProducto;
 import ClassAngels.TextAreaRenderer;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.TableColumn;
@@ -24,6 +31,7 @@ public class AdDescargasInventario extends javax.swing.JPanel {
      */
     public AdDescargasInventario() {
         initComponents();
+        PAPAENUSO();
         ListarProductosInventario();
         ListarInventario();
     }
@@ -170,6 +178,50 @@ public class AdDescargasInventario extends javax.swing.JPanel {
         }
     }
      
+     public void PapaBelca() throws SQLException{
+    
+        BDConexion conecta = new BDConexion();
+        PreparedStatement smtp;
+        try (Connection con = conecta.getConexion()) {
+            smtp = null;
+            smtp =con.prepareStatement("call cambiopapa(57);");
+            smtp.executeUpdate();
+        }
+        smtp.close(); 
+        JOptionPane.showMessageDialog(null, "CAMBIO REALIZADO");
+    }
+     
+    public void PapaNatural() throws SQLException{
+    
+        BDConexion conecta = new BDConexion();
+        PreparedStatement smtp;
+        try (Connection con = conecta.getConexion()) {
+            smtp = null;
+            smtp =con.prepareStatement("call cambiopapa(110);");
+            smtp.executeUpdate();
+        }
+        smtp.close(); 
+        JOptionPane.showMessageDialog(null, "CAMBIO REALIZADO");
+    }
+    
+    
+     public  void PAPAENUSO() {
+            try {
+                BDConexion conecta = new BDConexion();
+                Connection cn = conecta.getConexion();
+                java.sql.Statement stmt = cn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT PRO.DESCRIPCION FROM angels.productosdescargas PD INNER JOIN productosinventario PRO ON PRO.idproductosinve = PD.idproductosinve WHERE PD.id_descarga in(489,492,494,495,498,514,518,522,526,528,530,531,535,536,545,565,566) GROUP BY DESCRIPCION");
+                while (rs.next()) {
+                      PAPA.setText(rs.getString("DESCRIPCION"));
+                      //Usuario = rs.getString("usuario");
+                }
+                rs.close();
+                stmt.close();
+                cn.close();
+            } catch (Exception error) {
+                System.out.print(error);
+            }
+        }
      
      
 
@@ -338,6 +390,11 @@ public class AdDescargasInventario extends javax.swing.JPanel {
         });
 
         jButton3.setText("USAR PAPA BELCA");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("TIPO DE PAPA EN USO ");
 
@@ -456,11 +513,25 @@ public class AdDescargasInventario extends javax.swing.JPanel {
     }//GEN-LAST:event_PAPAActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        //PAPA BELCA = 57
-        //PAPA NATURAL = 110
-        //SELECT concat(P.DESCRIPCION1,' ',P.DESCRIPCION2) AS PRODUCTO,PD.cantidadout,PRO.DESCRIPCION,PD.unidad_medida FROM angels.productosdescargas PD INNER JOIN productos P ON P.CODIGO = PD.CODIGO JOIN productosinventario PRO ON PRO.idproductosinve = PD.idproductosinve WHERE PD.idproductosinve = 57;
+         try {
+             PapaNatural();
+             PAPAENUSO();
+             //PAPA BELCA = 57
+             //PAPA NATURAL = 110
+             //SELECT concat(P.DESCRIPCION1,' ',P.DESCRIPCION2) AS PRODUCTO,PD.cantidadout,PRO.DESCRIPCION,PD.unidad_medida FROM angels.productosdescargas PD INNER JOIN productos P ON P.CODIGO = PD.CODIGO JOIN productosinventario PRO ON PRO.idproductosinve = PD.idproductosinve WHERE PD.idproductosinve = 57;
+         } catch (SQLException ex) {
+             Logger.getLogger(AdDescargasInventario.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         try {
+             PapaBelca();
+             PAPAENUSO();
+         } catch (SQLException ex) {
+             Logger.getLogger(AdDescargasInventario.class.getName()).log(Level.SEVERE, null, ex);
+         }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
