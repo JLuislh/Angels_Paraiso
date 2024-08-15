@@ -30,7 +30,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
  *
  * @author jluis
  */
-public class AdTotalEnCajaElParaiso extends javax.swing.JPanel {
+public class AdTotalEnCajaElParaisoNOSEUSA extends javax.swing.JPanel {
     String Fecha;
     int cantidadOrdenes;
     Double SUMATOTAL;
@@ -40,7 +40,7 @@ public class AdTotalEnCajaElParaiso extends javax.swing.JPanel {
     /**
      * Creates new form TotalEnCaja
      */
-    public AdTotalEnCajaElParaiso() {
+    public AdTotalEnCajaElParaisoNOSEUSA() {
         initComponents();
     }
     
@@ -202,8 +202,7 @@ public class AdTotalEnCajaElParaiso extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel3)))
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(EFECTIVO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(EFECTIVOMENOSGASTOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
