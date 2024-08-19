@@ -151,7 +151,7 @@ public class AdVentasPorDiaParaiso extends javax.swing.JPanel {
             BDConexion con = new BDConexion();
             Connection conexion = con.getConexion();
             try {
-                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ENCAJAELPARAISO.jasper");
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ReporteVentasResumenParaiso.jasper");
                 Map parametros = new HashMap();
                 parametros.put("FECHAFIN", Fechafin + " 02:00:00");
                 parametros.put("FECHAIN", Fechain + " 02:00:00");
@@ -173,7 +173,7 @@ public class AdVentasPorDiaParaiso extends javax.swing.JPanel {
             BDConexion con = new BDConexion();
             Connection conexion = con.getConexion();
             try {
-                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ENCAJAELPARAISO.jasper");
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ReporteVentasTodoParaiso.jasper");
                 Map parametros = new HashMap();
                 parametros.put("FECHAFIN", Fechafin + " 02:00:00");
                 parametros.put("FECHAIN", Fechain + " 02:00:00");
