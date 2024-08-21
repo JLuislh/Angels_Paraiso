@@ -9,7 +9,9 @@ import BDclass.BDOrdenes;
 import ClassAngels.InsertarProducto;
 import ClassAngels.TextAreaRenderer;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -18,6 +20,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableColumn;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -32,6 +36,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
  */
 public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
     String Fechain;
+    int ID_TOTAL;
     String Fecha;
     String Fechafin;
     Double SUMATOTAL;
@@ -264,14 +269,20 @@ public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
          if(Fe.getDate() != null){ 
-        ListarOrdenes();}
+        ListarOrdenes();
+             try { 
+                 IngresoVentaDia();
+             } catch (SQLException ex) {
+                 Logger.getLogger(AdTotalEnCajaParaiso.class.getName()).log(Level.SEVERE, null, ex);
+             }
+         }
          else{
         JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
         }
@@ -447,9 +458,46 @@ try {
              TableColumn columna2 = Gast.getColumn("TOTAL");
              columna2.setPreferredWidth(25);
      }
-    
-    
-    
+     
+     public void IngresoVentaDia() throws SQLException{
+        ValidarVentaDia();
+        generarFechas();
+        BDConexion conecta = new BDConexion();
+        PreparedStatement smtp;
+        try (Connection con = conecta.getConexion()) {
+            smtp = null;
+            if(ID_TOTAL == 0){
+            smtp =con.prepareStatement("CALL CUENTADIARIA('"+Fechain+" 02:00:00','"+Fechafin+" 02:00:00','"+Fechain+"',1,0)");
+            smtp.executeUpdate();
+            }
+            else{
+            smtp =con.prepareStatement("CALL CUENTADIARIA('"+Fechain+" 02:00:00','"+Fechafin+" 02:00:00','"+Fechain+"',2,"+ID_TOTAL+")");
+            smtp.executeUpdate();
+            }
+        }
+        smtp.close(); 
+    }
+     
+    public void ValidarVentaDia() {
+          
+         DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+         Fecha = f.format(Fe.getDate());
+         System.out.println("FECHA DIA "+Fecha);
+            try {
+                BDConexion conecta = new BDConexion();
+                Connection cn = conecta.getConexion();
+                java.sql.Statement stmt = cn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT ID_TOTAL FROM angels.totaldiario where date_format(fecha,'%d/%m/%Y') = '"+Fecha+"'");
+                while (rs.next()) {
+                      ID_TOTAL = rs.getInt(1);
+                }
+                rs.close();
+                stmt.close();
+                cn.close();
+            } catch (SQLException error) {
+                System.out.print(error);
+            }
+        } 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField EFECTIVO;
