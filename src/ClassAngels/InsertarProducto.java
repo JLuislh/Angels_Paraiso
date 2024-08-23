@@ -33,7 +33,16 @@ public class InsertarProducto {
     private int Status;
     private String UMedida;
     private String Nota;
+    private String Sucursal;
 
+    public String getSucursal() {
+        return Sucursal;
+    }
+
+    public void setSucursal(String Sucursal) {
+        this.Sucursal = Sucursal;
+    }
+    
     public String getNota() {
         return Nota;
     }

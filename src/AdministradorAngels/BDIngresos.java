@@ -563,6 +563,34 @@ public static ArrayList<InsertarProducto>ListadeIngresos (int a) {
         return list;
 }
     
+     public static ArrayList<InsertarProducto> ListarTotalesSucursales ( ) {
+        return sucursales("SELECT if(sucursal = 1,'PALENCIA','RESIDENCIALES') AS SUCURSAL,TOTAL,date_format(fecha,'%d/%m/%Y') as Fecha FROM totaldiariosucursales WHERE MONTH(FECHA) = MONTH(CURDATE()) order by FECHA");    
+ }  
+
+    private static ArrayList<InsertarProducto> sucursales(String sql){
+    ArrayList<InsertarProducto> list = new ArrayList<>();
+    BDConexion conecta = new BDConexion();
+    Connection cn = conecta.getConexion();
+    
+        try {
+            InsertarProducto t;
+            Statement stmt = cn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                 t = new InsertarProducto();
+                 t.setSucursal(rs.getString("sucursal").toUpperCase());
+                 t.setTotal(rs.getDouble("total"));
+                 t.setFecha(rs.getString("fecha"));
+                 list.add(t);
+                            }
+            cn.close();
+        } catch (Exception e) {
+            System.out.println("error consulta DE LA TABLA "+e);
+            return null;
+        } 
+        return list;
+}
+    
     
     
     

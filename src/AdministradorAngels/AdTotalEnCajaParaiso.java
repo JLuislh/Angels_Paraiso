@@ -424,7 +424,7 @@ try {
             ListarGastos();
         }
       
-       private void ListarGastos(){
+    private void ListarGastos(){
         
         
         ArrayList<InsertarProducto> result = BDIngresos.ListarGastosTotal(Fecha);
