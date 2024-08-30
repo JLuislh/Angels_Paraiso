@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -22,6 +24,11 @@ public class Contraseña extends javax.swing.JFrame {
      * Creates new form Contraseña
      */
     public Contraseña() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+        }
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -136,8 +143,8 @@ public class Contraseña extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                 Ordenes F = new Ordenes();
-                  F.setVisible(true);
+                 //Ordenes F = new Ordenes();
+                  //F.setVisible(true);
                   this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

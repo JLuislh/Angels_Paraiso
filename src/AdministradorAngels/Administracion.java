@@ -334,7 +334,7 @@ public class Administracion extends javax.swing.JFrame {
 
         T8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         T8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        T8.setText("VOLVER A INICIO");
+        T8.setText("SALIR");
         T8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 T8MouseClicked(evt);
@@ -542,8 +542,8 @@ public class Administracion extends javax.swing.JFrame {
     }//GEN-LAST:event_T7MouseEntered
 
     private void T8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_T8MouseClicked
-        Ordenes F = new Ordenes();
-        F.setVisible(true);
+        //Ordenes F = new Ordenes();
+        //F.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_T8MouseClicked
 
