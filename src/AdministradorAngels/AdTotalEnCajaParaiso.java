@@ -63,9 +63,7 @@ public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
         SimpleDateFormat fe = new SimpleDateFormat("yyyy/MM/dd");
         Fechafin = fe.format(calendar.getTime());
         
-        
-         
-         
+       
         ////////FIN DE SUMAR UN DIA A FECHA
     
     }
@@ -281,7 +279,7 @@ public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
                  IngresoVentaDia();
              } catch (SQLException ex) {
                  Logger.getLogger(AdTotalEnCajaParaiso.class.getName()).log(Level.SEVERE, null, ex);
-             }
+                 System.out.println("A = "+ex);}
          }
          else{
         JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
@@ -303,7 +301,7 @@ public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
             Map parametros= new HashMap();
             parametros.put("FECHAFIN", Fechafin+" 02:00:00");
             parametros.put("FECHAIN", Fechain+" 02:00:00");
-              parametros.put("FECHA", Fecha);
+            parametros.put("FECHA", Fecha);
             System.out.println(parametros);
             JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
             JasperPrintManager.printReport(print, true);
@@ -462,6 +460,7 @@ try {
      public void IngresoVentaDia() throws SQLException{
         ValidarVentaDia();
         generarFechas();
+         
         BDConexion conecta = new BDConexion();
         PreparedStatement smtp;
         try (Connection con = conecta.getConexion()) {
@@ -472,6 +471,7 @@ try {
             }
             else{
             smtp =con.prepareStatement("CALL CUENTADIARIA('"+Fechain+" 02:00:00','"+Fechafin+" 02:00:00','"+Fechain+"',2,"+ID_TOTAL+")");
+                System.out.println(smtp);
             smtp.executeUpdate();
             }
         }
@@ -490,6 +490,7 @@ try {
                 ResultSet rs = stmt.executeQuery("SELECT ID_TOTAL FROM angels.totaldiario where date_format(fecha,'%d/%m/%Y') = '"+Fecha+"'");
                 while (rs.next()) {
                       ID_TOTAL = rs.getInt(1);
+                      System.out.println("ID_TOTAL ="+ID_TOTAL);
                 }
                 rs.close();
                 stmt.close();
