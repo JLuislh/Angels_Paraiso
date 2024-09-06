@@ -542,8 +542,8 @@ public class Administracion extends javax.swing.JFrame {
     }//GEN-LAST:event_T7MouseEntered
 
     private void T8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_T8MouseClicked
-        //Ordenes F = new Ordenes();
-        //F.setVisible(true);
+        Ordenes F = new Ordenes();
+        F.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_T8MouseClicked
 

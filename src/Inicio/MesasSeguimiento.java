@@ -37,6 +37,17 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
      int orden18;
      int orden19;
      int orden20;
+     int orden21;
+     int orden22;
+     int orden23;
+     int orden24;
+     int orden25;
+     int orden26;
+     int orden27;
+     int orden28;
+     int orden29;
+     int orden30;
+     int orden31;
      Color Mesas = new Color(255,51,51);
 
     /**
@@ -72,6 +83,17 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
         Mesa18.setEnabled(true);
         Mesa19.setEnabled(true);
         Mesa20.setEnabled(true);
+        Mesa21.setEnabled(true);
+        Mesa22.setEnabled(true);
+        Mesa23.setEnabled(true);
+        Mesa24.setEnabled(true);
+        Mesa25.setEnabled(true);
+        Mesa26.setEnabled(true);
+        Mesa27.setEnabled(true);
+        Mesa28.setEnabled(true);
+        Mesa29.setEnabled(true);
+        Mesa30.setEnabled(true);
+        Mesa31.setEnabled(true);
         Mesa1.setBackground(Color.GREEN);
         Mesa2.setBackground(Color.GREEN);
         Mesa3.setBackground(Color.GREEN);
@@ -92,6 +114,17 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
         Mesa18.setBackground(Color.GREEN);
         Mesa19.setBackground(Color.GREEN);
         Mesa20.setBackground(Color.GREEN);
+        Mesa21.setBackground(Color.GREEN);
+        Mesa22.setBackground(Color.GREEN);
+        Mesa23.setBackground(Color.GREEN);
+        Mesa24.setBackground(Color.GREEN);
+        Mesa25.setBackground(Color.GREEN);
+        Mesa26.setBackground(Color.GREEN);
+        Mesa27.setBackground(Color.GREEN);
+        Mesa28.setBackground(Color.GREEN);
+        Mesa29.setBackground(Color.GREEN);
+        Mesa30.setBackground(Color.GREEN);
+        Mesa31.setBackground(Color.GREEN);
     }
 
     public void disponibilidad(boolean a) {
@@ -178,6 +211,50 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
                 Mesa20.setEnabled(a);
                 Mesa20.setBackground(Mesas);
                 orden20 = result.get(i).getOrden();
+            } else if ("MESA21".equals(b)) {
+                Mesa21.setEnabled(a);
+                Mesa21.setBackground(Mesas);
+                orden21 = result.get(i).getOrden();
+            }else if ("MESA22".equals(b)) {
+                Mesa22.setEnabled(a);
+                Mesa22.setBackground(Mesas);
+                orden22 = result.get(i).getOrden();
+            }else if ("MESA23".equals(b)) {
+                Mesa23.setEnabled(a);
+                Mesa23.setBackground(Mesas);
+                orden23 = result.get(i).getOrden();
+            }else if ("MESA24".equals(b)) {
+                Mesa24.setEnabled(a);
+                Mesa24.setBackground(Mesas);
+                orden24 = result.get(i).getOrden();
+            }else if ("MESA25".equals(b)) {
+                Mesa25.setEnabled(a);
+                Mesa25.setBackground(Mesas);
+                orden25 = result.get(i).getOrden();
+            }else if ("MESA26".equals(b)) {
+                Mesa26.setEnabled(a);
+                Mesa26.setBackground(Mesas);
+                orden26 = result.get(i).getOrden();
+            }else if ("MESA27".equals(b)) {
+                Mesa27.setEnabled(a);
+                Mesa27.setBackground(Mesas);
+                orden27 = result.get(i).getOrden();
+            }else if ("MESA28".equals(b)) {
+                Mesa28.setEnabled(a);
+                Mesa28.setBackground(Mesas);
+                orden28 = result.get(i).getOrden();
+            }else if ("MESA29".equals(b)) {
+                Mesa29.setEnabled(a);
+                Mesa29.setBackground(Mesas);
+                orden29 = result.get(i).getOrden();
+            }else if ("MESA30".equals(b)) {
+                Mesa30.setEnabled(a);
+                Mesa30.setBackground(Mesas);
+                orden30 = result.get(i).getOrden();
+            }else if ("MESA31".equals(b)) {
+                Mesa31.setEnabled(a);
+                Mesa31.setBackground(Mesas);
+                orden31 = result.get(i).getOrden();
             }
             //System.out.println("MESA " +result.get(i).getMesa());
         }
@@ -237,6 +314,28 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panelRound1 = new ClassAngels.PanelRound();
         jLabel22 = new javax.swing.JLabel();
+        Mesa21 = new ClassAngels.PanelRound();
+        ME21 = new javax.swing.JLabel();
+        Mesa22 = new ClassAngels.PanelRound();
+        ME22 = new javax.swing.JLabel();
+        Mesa23 = new ClassAngels.PanelRound();
+        ME23 = new javax.swing.JLabel();
+        Mesa24 = new ClassAngels.PanelRound();
+        ME24 = new javax.swing.JLabel();
+        Mesa25 = new ClassAngels.PanelRound();
+        ME25 = new javax.swing.JLabel();
+        Mesa26 = new ClassAngels.PanelRound();
+        ME26 = new javax.swing.JLabel();
+        Mesa27 = new ClassAngels.PanelRound();
+        ME27 = new javax.swing.JLabel();
+        Mesa28 = new ClassAngels.PanelRound();
+        ME28 = new javax.swing.JLabel();
+        Mesa29 = new ClassAngels.PanelRound();
+        ME29 = new javax.swing.JLabel();
+        Mesa30 = new ClassAngels.PanelRound();
+        ME30 = new javax.swing.JLabel();
+        Mesa31 = new ClassAngels.PanelRound();
+        ME31 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -796,103 +895,450 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
             .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
+        Mesa21.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa21.setRoundBottomLeft(20);
+        Mesa21.setRoundBottomRight(20);
+        Mesa21.setRoundTopLeft(20);
+        Mesa21.setRoundTopRight(20);
+
+        ME21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME21.setText("MESA 21");
+        ME21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME21MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa21Layout = new javax.swing.GroupLayout(Mesa21);
+        Mesa21.setLayout(Mesa21Layout);
+        Mesa21Layout.setHorizontalGroup(
+            Mesa21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME21, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa21Layout.setVerticalGroup(
+            Mesa21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa21Layout.createSequentialGroup()
+                .addComponent(ME21, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa22.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa22.setRoundBottomLeft(20);
+        Mesa22.setRoundBottomRight(20);
+        Mesa22.setRoundTopLeft(20);
+        Mesa22.setRoundTopRight(20);
+
+        ME22.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME22.setText("MESA 22");
+        ME22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME22MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa22Layout = new javax.swing.GroupLayout(Mesa22);
+        Mesa22.setLayout(Mesa22Layout);
+        Mesa22Layout.setHorizontalGroup(
+            Mesa22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME22, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa22Layout.setVerticalGroup(
+            Mesa22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa22Layout.createSequentialGroup()
+                .addComponent(ME22, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa23.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa23.setRoundBottomLeft(20);
+        Mesa23.setRoundBottomRight(20);
+        Mesa23.setRoundTopLeft(20);
+        Mesa23.setRoundTopRight(20);
+
+        ME23.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME23.setText("MESA 23");
+        ME23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME23MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa23Layout = new javax.swing.GroupLayout(Mesa23);
+        Mesa23.setLayout(Mesa23Layout);
+        Mesa23Layout.setHorizontalGroup(
+            Mesa23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME23, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa23Layout.setVerticalGroup(
+            Mesa23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa23Layout.createSequentialGroup()
+                .addComponent(ME23, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa24.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa24.setRoundBottomLeft(20);
+        Mesa24.setRoundBottomRight(20);
+        Mesa24.setRoundTopLeft(20);
+        Mesa24.setRoundTopRight(20);
+
+        ME24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME24.setText("MESA 24");
+        ME24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME24MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa24Layout = new javax.swing.GroupLayout(Mesa24);
+        Mesa24.setLayout(Mesa24Layout);
+        Mesa24Layout.setHorizontalGroup(
+            Mesa24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME24, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa24Layout.setVerticalGroup(
+            Mesa24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa24Layout.createSequentialGroup()
+                .addComponent(ME24, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa25.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa25.setRoundBottomLeft(20);
+        Mesa25.setRoundBottomRight(20);
+        Mesa25.setRoundTopLeft(20);
+        Mesa25.setRoundTopRight(20);
+
+        ME25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME25.setText("MESA 25");
+        ME25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME25MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa25Layout = new javax.swing.GroupLayout(Mesa25);
+        Mesa25.setLayout(Mesa25Layout);
+        Mesa25Layout.setHorizontalGroup(
+            Mesa25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME25, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa25Layout.setVerticalGroup(
+            Mesa25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa25Layout.createSequentialGroup()
+                .addComponent(ME25, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa26.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa26.setRoundBottomLeft(20);
+        Mesa26.setRoundBottomRight(20);
+        Mesa26.setRoundTopLeft(20);
+        Mesa26.setRoundTopRight(20);
+
+        ME26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME26.setText("MESA 26");
+        ME26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME26MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa26Layout = new javax.swing.GroupLayout(Mesa26);
+        Mesa26.setLayout(Mesa26Layout);
+        Mesa26Layout.setHorizontalGroup(
+            Mesa26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME26, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa26Layout.setVerticalGroup(
+            Mesa26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa26Layout.createSequentialGroup()
+                .addComponent(ME26, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa27.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa27.setRoundBottomLeft(20);
+        Mesa27.setRoundBottomRight(20);
+        Mesa27.setRoundTopLeft(20);
+        Mesa27.setRoundTopRight(20);
+
+        ME27.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME27.setText("MESA 27");
+        ME27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME27MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa27Layout = new javax.swing.GroupLayout(Mesa27);
+        Mesa27.setLayout(Mesa27Layout);
+        Mesa27Layout.setHorizontalGroup(
+            Mesa27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME27, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa27Layout.setVerticalGroup(
+            Mesa27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa27Layout.createSequentialGroup()
+                .addComponent(ME27, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa28.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa28.setRoundBottomLeft(20);
+        Mesa28.setRoundBottomRight(20);
+        Mesa28.setRoundTopLeft(20);
+        Mesa28.setRoundTopRight(20);
+
+        ME28.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME28.setText("MESA 28");
+        ME28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME28MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa28Layout = new javax.swing.GroupLayout(Mesa28);
+        Mesa28.setLayout(Mesa28Layout);
+        Mesa28Layout.setHorizontalGroup(
+            Mesa28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME28, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa28Layout.setVerticalGroup(
+            Mesa28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa28Layout.createSequentialGroup()
+                .addComponent(ME28, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa29.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa29.setRoundBottomLeft(20);
+        Mesa29.setRoundBottomRight(20);
+        Mesa29.setRoundTopLeft(20);
+        Mesa29.setRoundTopRight(20);
+
+        ME29.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME29.setText("MESA 29");
+        ME29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME29MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa29Layout = new javax.swing.GroupLayout(Mesa29);
+        Mesa29.setLayout(Mesa29Layout);
+        Mesa29Layout.setHorizontalGroup(
+            Mesa29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME29, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa29Layout.setVerticalGroup(
+            Mesa29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa29Layout.createSequentialGroup()
+                .addComponent(ME29, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa30.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa30.setRoundBottomLeft(20);
+        Mesa30.setRoundBottomRight(20);
+        Mesa30.setRoundTopLeft(20);
+        Mesa30.setRoundTopRight(20);
+
+        ME30.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME30.setText("MESA 30");
+        ME30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME30MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa30Layout = new javax.swing.GroupLayout(Mesa30);
+        Mesa30.setLayout(Mesa30Layout);
+        Mesa30Layout.setHorizontalGroup(
+            Mesa30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME30, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa30Layout.setVerticalGroup(
+            Mesa30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa30Layout.createSequentialGroup()
+                .addComponent(ME30, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        Mesa31.setBackground(new java.awt.Color(255, 153, 153));
+        Mesa31.setRoundBottomLeft(20);
+        Mesa31.setRoundBottomRight(20);
+        Mesa31.setRoundTopLeft(20);
+        Mesa31.setRoundTopRight(20);
+
+        ME31.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ME31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ME31.setText("MESA 31");
+        ME31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ME31MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Mesa31Layout = new javax.swing.GroupLayout(Mesa31);
+        Mesa31.setLayout(Mesa31Layout);
+        Mesa31Layout.setHorizontalGroup(
+            Mesa31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ME31, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        Mesa31Layout.setVerticalGroup(
+            Mesa31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Mesa31Layout.createSequentialGroup()
+                .addComponent(ME31, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(106, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(72, 72, 72)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 861, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Mesa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Mesa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Mesa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Mesa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(Mesa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Mesa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Mesa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Mesa25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Mesa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Mesa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Mesa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(93, 93, 93))))
+                        .addComponent(Mesa26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Mesa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Mesa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Mesa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mesa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Mesa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Mesa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Mesa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Mesa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(203, 203, 203))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(39, 39, 39)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Mesa7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Mesa9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(Mesa18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Mesa17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Mesa19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Mesa20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(Mesa22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(Mesa23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Mesa24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Mesa21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Mesa25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Mesa27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Mesa28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Mesa29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Mesa30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Mesa31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Mesa26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1090, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1130,6 +1576,127 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel22MouseClicked
 
+    private void ME21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME21MouseClicked
+        if(Mesa21.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 21;
+        noorden = orden21;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME21MouseClicked
+
+    private void ME22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME22MouseClicked
+        if(Mesa22.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 22;
+        noorden = orden22;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME22MouseClicked
+
+    private void ME23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME23MouseClicked
+        if(Mesa23.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 23;
+        noorden = orden23;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME23MouseClicked
+
+    private void ME24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME24MouseClicked
+        if(Mesa24.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 24;
+        noorden = orden24;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME24MouseClicked
+
+    private void ME25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME25MouseClicked
+        if(Mesa25.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 25;
+        noorden = orden25;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME25MouseClicked
+
+    private void ME26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME26MouseClicked
+        if(Mesa26.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 26;
+        noorden = orden26;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME26MouseClicked
+
+    private void ME27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME27MouseClicked
+        if(Mesa27.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 27;
+        noorden = orden27;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME27MouseClicked
+
+    private void ME28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME28MouseClicked
+        if(Mesa28.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 28;
+        noorden = orden28;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME28MouseClicked
+
+    private void ME29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME29MouseClicked
+        if(Mesa29.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 29;
+        noorden = orden29;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME29MouseClicked
+
+    private void ME30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME30MouseClicked
+      if(Mesa30.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 30;
+        noorden = orden30;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME30MouseClicked
+
+    private void ME31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ME31MouseClicked
+        if(Mesa31.isEnabled()){JOptionPane.showMessageDialog(null, "Mesa No Tiene Orden Abierta...");}
+        else{
+        id_mesa = 31;
+        noorden = orden31;
+        MenuSeguimiento F = new MenuSeguimiento(noorden,id_mesa);
+        F.setVisible(true);
+        this.dispose();
+      }
+    }//GEN-LAST:event_ME31MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1180,7 +1747,18 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
     private javax.swing.JLabel ME19;
     private javax.swing.JLabel ME2;
     private javax.swing.JLabel ME20;
+    private javax.swing.JLabel ME21;
+    private javax.swing.JLabel ME22;
+    private javax.swing.JLabel ME23;
+    private javax.swing.JLabel ME24;
+    private javax.swing.JLabel ME25;
+    private javax.swing.JLabel ME26;
+    private javax.swing.JLabel ME27;
+    private javax.swing.JLabel ME28;
+    private javax.swing.JLabel ME29;
     private javax.swing.JLabel ME3;
+    private javax.swing.JLabel ME30;
+    private javax.swing.JLabel ME31;
     private javax.swing.JLabel ME4;
     private javax.swing.JLabel ME5;
     private javax.swing.JLabel ME6;
@@ -1200,7 +1778,18 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
     private ClassAngels.PanelRound Mesa19;
     private ClassAngels.PanelRound Mesa2;
     private ClassAngels.PanelRound Mesa20;
+    private ClassAngels.PanelRound Mesa21;
+    private ClassAngels.PanelRound Mesa22;
+    private ClassAngels.PanelRound Mesa23;
+    private ClassAngels.PanelRound Mesa24;
+    private ClassAngels.PanelRound Mesa25;
+    private ClassAngels.PanelRound Mesa26;
+    private ClassAngels.PanelRound Mesa27;
+    private ClassAngels.PanelRound Mesa28;
+    private ClassAngels.PanelRound Mesa29;
     private ClassAngels.PanelRound Mesa3;
+    private ClassAngels.PanelRound Mesa30;
+    private ClassAngels.PanelRound Mesa31;
     private ClassAngels.PanelRound Mesa4;
     private ClassAngels.PanelRound Mesa5;
     private ClassAngels.PanelRound Mesa6;
@@ -1254,6 +1843,28 @@ String texto1 = "<html><center><body>MESA 1<br>Orden No<br><font color='white'>"
         ME19.setText(texto19);
         String texto20 ="<html><center><body>MESA 20<br>Orden No<br><font color='white'>"+orden20+"</font></body></center></html>";
         ME20.setText(texto20);
+        String texto21 ="<html><center><body>MESA 21<br>Orden No<br><font color='white'>"+orden21+"</font></body></center></html>";
+        ME21.setText(texto21);
+        String texto22 ="<html><center><body>MESA 22<br>Orden No<br><font color='white'>"+orden22+"</font></body></center></html>";
+        ME22.setText(texto22);
+        String texto23 ="<html><center><body>MESA 23<br>Orden No<br><font color='white'>"+orden23+"</font></body></center></html>";
+        ME23.setText(texto23);
+        String texto24 ="<html><center><body>MESA 24<br>Orden No<br><font color='white'>"+orden24+"</font></body></center></html>";
+        ME24.setText(texto24);
+        String texto25 ="<html><center><body>MESA 25<br>Orden No<br><font color='white'>"+orden25+"</font></body></center></html>";
+        ME25.setText(texto25);
+        String texto26 ="<html><center><body>MESA 26<br>Orden No<br><font color='white'>"+orden26+"</font></body></center></html>";
+        ME26.setText(texto26);
+        String texto27 ="<html><center><body>MESA 27<br>Orden No<br><font color='white'>"+orden27+"</font></body></center></html>";
+        ME27.setText(texto27);
+        String texto28 ="<html><center><body>MESA 28<br>Orden No<br><font color='white'>"+orden28+"</font></body></center></html>";
+        ME28.setText(texto28);
+        String texto29 ="<html><center><body>MESA 29<br>Orden No<br><font color='white'>"+orden29+"</font></body></center></html>";
+        ME29.setText(texto29);
+        String texto30 ="<html><center><body>MESA 30<br>Orden No<br><font color='white'>"+orden30+"</font></body></center></html>";
+        ME30.setText(texto30);
+        String texto31 ="<html><center><body>MESA 31<br>Orden No<br><font color='white'>"+orden31+"</font></body></center></html>";
+        ME31.setText(texto31);
 
  }
 
