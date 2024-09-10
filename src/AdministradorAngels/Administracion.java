@@ -33,7 +33,7 @@ public class Administracion extends javax.swing.JFrame {
         T5.setText(texto5);
         String texto6 = "<html><center><body>DESCARGAS<br>DE<br>INVENTARIO</body></center></html>";
         T6.setText(texto6);
-        String texto7 = "<html><center><body>GASTOS<br>POR DIA</body></center></html>";
+        String texto7 = "<html><center><body>TODOS<br>LOS<br>GASTOS</body></center></html>";
         T7.setText(texto7);
         String texto8 = "<html><center><body>VOLVER<br>A<br>INICIO</body></center></html>";
         T8.setText(texto8);
@@ -526,7 +526,7 @@ public class Administracion extends javax.swing.JFrame {
     }//GEN-LAST:event_T6MouseEntered
 
     private void T7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_T7MouseClicked
-        AdGastos op2 = new AdGastos();
+        TodosLosGastos op2 = new TodosLosGastos();
         op2.setSize(1140, 635);
         op2.setLocation(0, 0);
         PANEL.removeAll();
