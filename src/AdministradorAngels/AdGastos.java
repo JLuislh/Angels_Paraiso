@@ -333,7 +333,6 @@ public class AdGastos extends javax.swing.JPanel {
     }//GEN-LAST:event_CANTIDADActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
       ListarGastos();
     }//GEN-LAST:event_jButton2ActionPerformed
 
