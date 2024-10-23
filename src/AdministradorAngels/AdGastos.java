@@ -49,6 +49,7 @@ public class AdGastos extends javax.swing.JPanel {
             p.setCantidad(Integer.parseInt(CANTIDAD.getText()));
             p.setPrecio(Double.parseDouble(TOTAL.getText()));
             p.setFecha(Fechain);
+            p.setNofactura("0");
             BDProductos.InsertarGastos(p);
             JOptionPane.showMessageDialog(null,"GASTO AGREGADO....");
             limpiar();

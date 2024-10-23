@@ -34,7 +34,15 @@ public class InsertarProducto {
     private String UMedida;
     private String Nota;
     private String Sucursal;
+    private String nofactura;
 
+    public String getNofactura() {
+        return nofactura;
+    }
+
+    public void setNofactura(String nofactura) {
+        this.nofactura = nofactura;
+    }
     public String getSucursal() {
         return Sucursal;
     }
