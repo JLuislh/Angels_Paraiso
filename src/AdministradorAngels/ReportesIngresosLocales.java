@@ -20,6 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableColumn;
+import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperPrintManager;
@@ -81,14 +82,16 @@ public class ReportesIngresosLocales extends javax.swing.JPanel {
            
                 BDConexion con = new BDConexion();
                 Connection conexion = con.getConexion();
-                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ResumenIngresosElparaiso.jasper");
+                System.out.println("llega2 a el paraiso");
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ResumenIngresosElparaisoSI.jasper");
+                System.out.println("pasa a el paraiso");
                 Map parametros = new HashMap();
                 parametros.put("FECHAIN", FECHAINs);
                 parametros.put("FECHAFIN", FECHAFINs);
                 JasperPrint print = JasperFillManager.fillReport(jasperReport, parametros, conexion);
                 JasperPrintManager.printReport(print, true);
              
-        } catch (Exception e) {
+        } catch (JRException e) {
             System.out.println("F" + e);
             JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  " + e);
         }
