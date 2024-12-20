@@ -13,13 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author jluis
  */
-public class BDConexion {
 
-    //public static final String URL = "jdbc:mysql://26.177.160.206:3306/angels?useTimezone=true&serverTimezone=UTC"; //SERVIDOR MAQUINA TRABAJO
-     public static final String URL = "jdbc:mysql://26.74.177.186:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso
-   //public static final String URL = "jdbc:mysql://localhost:3306/angels?useTimezone=true&serverTimezone=UTC";//administrador
-   public static final String USER =   "angels";//"SuperElrey";
-   public static final String CLAVE =  "Coast@cm";// 
+public class BDConexionPedidos {
+
+   public static final String URL = "jdbc:mysql://26.49.11.7:3306/PedidosProductos?useTimezone=true&serverTimezone=UTC";
+   public static final String USER =   "PedidosProductos";//
+   public static final String CLAVE =  "Coast@cm";//  
      
    public Connection getConexion(){
         Connection con = null;
@@ -32,9 +31,4 @@ public class BDConexion {
         }
         return con;
     }
-    }
-    
-    
-    
-    
-
+}

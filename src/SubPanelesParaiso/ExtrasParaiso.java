@@ -152,7 +152,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
        P41.setBackground(Original);
        P42.setBackground(Original);
        P43.setBackground(Original);
-       
+       P44.setBackground(Original);
        
        MICHE1.setBackground(Original);
        MICHE2.setBackground(Original);
@@ -382,6 +382,14 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         EX42 = new javax.swing.JLabel();
         P43 = new ClassAngels.PanelRound();
         EX43 = new javax.swing.JLabel();
+        P44 = new ClassAngels.PanelRound();
+        EX44 = new javax.swing.JLabel();
+        P45 = new ClassAngels.PanelRound();
+        EX45 = new javax.swing.JLabel();
+        P46 = new ClassAngels.PanelRound();
+        EX46 = new javax.swing.JLabel();
+        P47 = new ClassAngels.PanelRound();
+        EX47 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         MICHE1 = new ClassAngels.PanelRound();
         MI1 = new javax.swing.JLabel();
@@ -443,13 +451,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EXTRAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         P1.setBackground(new java.awt.Color(204, 255, 102));
-        P1.setPreferredSize(new java.awt.Dimension(75, 70));
+        P1.setPreferredSize(new java.awt.Dimension(75, 55));
         P1.setRoundBottomLeft(20);
         P1.setRoundBottomRight(20);
         P1.setRoundTopLeft(20);
         P1.setRoundTopRight(20);
 
-        EX1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX1.setText("1");
         EX1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -466,17 +474,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P1Layout.setVerticalGroup(
             P1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P2.setBackground(new java.awt.Color(204, 255, 102));
-        P2.setPreferredSize(new java.awt.Dimension(75, 70));
+        P2.setPreferredSize(new java.awt.Dimension(75, 55));
         P2.setRoundBottomLeft(20);
         P2.setRoundBottomRight(20);
         P2.setRoundTopLeft(20);
         P2.setRoundTopRight(20);
 
-        EX2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX2.setText("2");
         EX2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -493,17 +501,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P2Layout.setVerticalGroup(
             P2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX2, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P3.setBackground(new java.awt.Color(204, 255, 102));
-        P3.setPreferredSize(new java.awt.Dimension(75, 70));
+        P3.setPreferredSize(new java.awt.Dimension(75, 55));
         P3.setRoundBottomLeft(20);
         P3.setRoundBottomRight(20);
         P3.setRoundTopLeft(20);
         P3.setRoundTopRight(20);
 
-        EX3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX3.setText("3");
         EX3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -520,17 +528,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P3Layout.setVerticalGroup(
             P3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX3, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX3, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P4.setBackground(new java.awt.Color(204, 255, 102));
-        P4.setPreferredSize(new java.awt.Dimension(75, 70));
+        P4.setPreferredSize(new java.awt.Dimension(75, 55));
         P4.setRoundBottomLeft(20);
         P4.setRoundBottomRight(20);
         P4.setRoundTopLeft(20);
         P4.setRoundTopRight(20);
 
-        EX4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX4.setText("4");
         EX4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -547,17 +555,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P4Layout.setVerticalGroup(
             P4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX4, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX4, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P5.setBackground(new java.awt.Color(204, 255, 102));
-        P5.setPreferredSize(new java.awt.Dimension(75, 70));
+        P5.setPreferredSize(new java.awt.Dimension(75, 55));
         P5.setRoundBottomLeft(20);
         P5.setRoundBottomRight(20);
         P5.setRoundTopLeft(20);
         P5.setRoundTopRight(20);
 
-        EX5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX5.setText("5");
         EX5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -574,17 +582,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P5Layout.setVerticalGroup(
             P5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX5, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX5, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P6.setBackground(new java.awt.Color(204, 255, 102));
-        P6.setPreferredSize(new java.awt.Dimension(75, 70));
+        P6.setPreferredSize(new java.awt.Dimension(75, 55));
         P6.setRoundBottomLeft(20);
         P6.setRoundBottomRight(20);
         P6.setRoundTopLeft(20);
         P6.setRoundTopRight(20);
 
-        EX6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX6.setText("6");
         EX6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -601,17 +609,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P6Layout.setVerticalGroup(
             P6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX6, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX6, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P7.setBackground(new java.awt.Color(204, 255, 102));
-        P7.setPreferredSize(new java.awt.Dimension(75, 70));
+        P7.setPreferredSize(new java.awt.Dimension(75, 55));
         P7.setRoundBottomLeft(20);
         P7.setRoundBottomRight(20);
         P7.setRoundTopLeft(20);
         P7.setRoundTopRight(20);
 
-        EX7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX7.setText("7");
         EX7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -628,17 +636,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P7Layout.setVerticalGroup(
             P7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX7, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX7, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P8.setBackground(new java.awt.Color(204, 255, 102));
-        P8.setPreferredSize(new java.awt.Dimension(75, 70));
+        P8.setPreferredSize(new java.awt.Dimension(75, 55));
         P8.setRoundBottomLeft(20);
         P8.setRoundBottomRight(20);
         P8.setRoundTopLeft(20);
         P8.setRoundTopRight(20);
 
-        EX8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX8.setText("8");
         EX8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -655,17 +663,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P8Layout.setVerticalGroup(
             P8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P9.setBackground(new java.awt.Color(204, 255, 102));
-        P9.setPreferredSize(new java.awt.Dimension(75, 70));
+        P9.setPreferredSize(new java.awt.Dimension(75, 55));
         P9.setRoundBottomLeft(20);
         P9.setRoundBottomRight(20);
         P9.setRoundTopLeft(20);
         P9.setRoundTopRight(20);
 
-        EX9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX9.setText("9");
         EX9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -682,18 +690,18 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P9Layout.setVerticalGroup(
             P9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX9, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX9, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P10.setBackground(new java.awt.Color(204, 255, 102));
         P10.setMinimumSize(new java.awt.Dimension(100, 75));
-        P10.setPreferredSize(new java.awt.Dimension(75, 70));
+        P10.setPreferredSize(new java.awt.Dimension(75, 55));
         P10.setRoundBottomLeft(20);
         P10.setRoundBottomRight(20);
         P10.setRoundTopLeft(20);
         P10.setRoundTopRight(20);
 
-        EX10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX10.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX10.setText("10");
         EX10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -715,13 +723,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
 
         P11.setBackground(new java.awt.Color(204, 255, 102));
         P11.setMinimumSize(new java.awt.Dimension(100, 75));
-        P11.setPreferredSize(new java.awt.Dimension(75, 70));
+        P11.setPreferredSize(new java.awt.Dimension(75, 55));
         P11.setRoundBottomLeft(20);
         P11.setRoundBottomRight(20);
         P11.setRoundTopLeft(20);
         P11.setRoundTopRight(20);
 
-        EX11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX11.setText("11");
         EX11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -744,13 +752,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P12.setBackground(new java.awt.Color(204, 255, 102));
-        P12.setPreferredSize(new java.awt.Dimension(75, 70));
+        P12.setPreferredSize(new java.awt.Dimension(75, 55));
         P12.setRoundBottomLeft(20);
         P12.setRoundBottomRight(20);
         P12.setRoundTopLeft(20);
         P12.setRoundTopRight(20);
 
-        EX12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX12.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX12.setText("12");
         EX12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -767,17 +775,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P12Layout.setVerticalGroup(
             P12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX12, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX12, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P13.setBackground(new java.awt.Color(204, 255, 102));
-        P13.setPreferredSize(new java.awt.Dimension(75, 70));
+        P13.setPreferredSize(new java.awt.Dimension(75, 55));
         P13.setRoundBottomLeft(20);
         P13.setRoundBottomRight(20);
         P13.setRoundTopLeft(20);
         P13.setRoundTopRight(20);
 
-        EX13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX13.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX13.setText("13");
         EX13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -798,13 +806,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P14.setBackground(new java.awt.Color(204, 255, 102));
-        P14.setPreferredSize(new java.awt.Dimension(75, 70));
+        P14.setPreferredSize(new java.awt.Dimension(75, 55));
         P14.setRoundBottomLeft(20);
         P14.setRoundBottomRight(20);
         P14.setRoundTopLeft(20);
         P14.setRoundTopRight(20);
 
-        EX14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX14.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX14.setText("14");
         EX14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -829,13 +837,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P15.setBackground(new java.awt.Color(204, 255, 102));
-        P15.setPreferredSize(new java.awt.Dimension(75, 70));
+        P15.setPreferredSize(new java.awt.Dimension(75, 55));
         P15.setRoundBottomLeft(20);
         P15.setRoundBottomRight(20);
         P15.setRoundTopLeft(20);
         P15.setRoundTopRight(20);
 
-        EX15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX15.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX15.setText("15");
         EX15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -852,17 +860,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P15Layout.setVerticalGroup(
             P15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P29.setBackground(new java.awt.Color(204, 255, 102));
-        P29.setPreferredSize(new java.awt.Dimension(75, 70));
+        P29.setPreferredSize(new java.awt.Dimension(75, 55));
         P29.setRoundBottomLeft(20);
         P29.setRoundBottomRight(20);
         P29.setRoundTopLeft(20);
         P29.setRoundTopRight(20);
 
-        EX29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX29.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX29.setText("29");
         EX29.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -879,17 +887,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P29Layout.setVerticalGroup(
             P29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX29, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX29, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P30.setBackground(new java.awt.Color(204, 255, 102));
-        P30.setPreferredSize(new java.awt.Dimension(75, 70));
+        P30.setPreferredSize(new java.awt.Dimension(75, 55));
         P30.setRoundBottomLeft(20);
         P30.setRoundBottomRight(20);
         P30.setRoundTopLeft(20);
         P30.setRoundTopRight(20);
 
-        EX30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX30.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX30.setText("30");
         EX30.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -910,13 +918,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P31.setBackground(new java.awt.Color(204, 255, 102));
-        P31.setPreferredSize(new java.awt.Dimension(75, 70));
+        P31.setPreferredSize(new java.awt.Dimension(75, 55));
         P31.setRoundBottomLeft(20);
         P31.setRoundBottomRight(20);
         P31.setRoundTopLeft(20);
         P31.setRoundTopRight(20);
 
-        EX31.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX31.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX31.setText("31");
         EX31.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -937,13 +945,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P32.setBackground(new java.awt.Color(204, 255, 102));
-        P32.setPreferredSize(new java.awt.Dimension(75, 70));
+        P32.setPreferredSize(new java.awt.Dimension(75, 55));
         P32.setRoundBottomLeft(20);
         P32.setRoundBottomRight(20);
         P32.setRoundTopLeft(20);
         P32.setRoundTopRight(20);
 
-        EX32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX32.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX32.setText("32");
         EX32.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -964,13 +972,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P34.setBackground(new java.awt.Color(204, 255, 102));
-        P34.setPreferredSize(new java.awt.Dimension(75, 70));
+        P34.setPreferredSize(new java.awt.Dimension(75, 55));
         P34.setRoundBottomLeft(20);
         P34.setRoundBottomRight(20);
         P34.setRoundTopLeft(20);
         P34.setRoundTopRight(20);
 
-        EX34.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX34.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX34.setText("34");
         EX34.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -991,13 +999,13 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
 
         P35.setBackground(new java.awt.Color(204, 255, 102));
-        P35.setPreferredSize(new java.awt.Dimension(75, 70));
+        P35.setPreferredSize(new java.awt.Dimension(75, 55));
         P35.setRoundBottomLeft(20);
         P35.setRoundBottomRight(20);
         P35.setRoundTopLeft(20);
         P35.setRoundTopRight(20);
 
-        EX35.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX35.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX35.setText("35");
         EX35.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1014,17 +1022,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P35Layout.setVerticalGroup(
             P35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX35, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX35, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P37.setBackground(new java.awt.Color(204, 255, 102));
-        P37.setPreferredSize(new java.awt.Dimension(75, 70));
+        P37.setPreferredSize(new java.awt.Dimension(75, 55));
         P37.setRoundBottomLeft(20);
         P37.setRoundBottomRight(20);
         P37.setRoundTopLeft(20);
         P37.setRoundTopRight(20);
 
-        EX37.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX37.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX37.setText("37");
         EX37.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1041,17 +1049,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P37Layout.setVerticalGroup(
             P37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX37, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX37, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P38.setBackground(new java.awt.Color(204, 255, 102));
-        P38.setPreferredSize(new java.awt.Dimension(75, 70));
+        P38.setPreferredSize(new java.awt.Dimension(75, 55));
         P38.setRoundBottomLeft(20);
         P38.setRoundBottomRight(20);
         P38.setRoundTopLeft(20);
         P38.setRoundTopRight(20);
 
-        EX38.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX38.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX38.setText("38");
         EX38.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1068,17 +1076,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P38Layout.setVerticalGroup(
             P38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX38, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX38, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P39.setBackground(new java.awt.Color(204, 255, 102));
-        P39.setPreferredSize(new java.awt.Dimension(75, 70));
+        P39.setPreferredSize(new java.awt.Dimension(75, 55));
         P39.setRoundBottomLeft(20);
         P39.setRoundBottomRight(20);
         P39.setRoundTopLeft(20);
         P39.setRoundTopRight(20);
 
-        EX39.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX39.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX39.setText("39");
         EX39.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1095,17 +1103,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P39Layout.setVerticalGroup(
             P39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX39, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX39, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P40.setBackground(new java.awt.Color(204, 255, 102));
-        P40.setPreferredSize(new java.awt.Dimension(75, 70));
+        P40.setPreferredSize(new java.awt.Dimension(75, 55));
         P40.setRoundBottomLeft(20);
         P40.setRoundBottomRight(20);
         P40.setRoundTopLeft(20);
         P40.setRoundTopRight(20);
 
-        EX40.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX40.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX40.setText("40");
         EX40.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1122,17 +1130,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P40Layout.setVerticalGroup(
             P40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX40, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX40, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P41.setBackground(new java.awt.Color(204, 255, 102));
-        P41.setPreferredSize(new java.awt.Dimension(75, 70));
+        P41.setPreferredSize(new java.awt.Dimension(75, 55));
         P41.setRoundBottomLeft(20);
         P41.setRoundBottomRight(20);
         P41.setRoundTopLeft(20);
         P41.setRoundTopRight(20);
 
-        EX41.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX41.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX41.setText("41");
         EX41.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1149,17 +1157,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P41Layout.setVerticalGroup(
             P41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX41, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX41, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P42.setBackground(new java.awt.Color(204, 255, 102));
-        P42.setPreferredSize(new java.awt.Dimension(75, 70));
+        P42.setPreferredSize(new java.awt.Dimension(75, 55));
         P42.setRoundBottomLeft(20);
         P42.setRoundBottomRight(20);
         P42.setRoundTopLeft(20);
         P42.setRoundTopRight(20);
 
-        EX42.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX42.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX42.setText("42");
         EX42.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1176,17 +1184,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P42Layout.setVerticalGroup(
             P42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX42, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX42, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         P43.setBackground(new java.awt.Color(204, 255, 102));
-        P43.setPreferredSize(new java.awt.Dimension(75, 70));
+        P43.setPreferredSize(new java.awt.Dimension(75, 55));
         P43.setRoundBottomLeft(20);
         P43.setRoundBottomRight(20);
         P43.setRoundTopLeft(20);
         P43.setRoundTopRight(20);
 
-        EX43.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EX43.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EX43.setText("43");
         EX43.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1203,7 +1211,112 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         P43Layout.setVerticalGroup(
             P43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EX43, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(EX43, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        P44.setBackground(new java.awt.Color(204, 255, 102));
+        P44.setPreferredSize(new java.awt.Dimension(75, 55));
+        P44.setRoundBottomLeft(20);
+        P44.setRoundBottomRight(20);
+        P44.setRoundTopLeft(20);
+        P44.setRoundTopRight(20);
+
+        EX44.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        EX44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX44.setText("44");
+        EX44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EX44MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P44Layout = new javax.swing.GroupLayout(P44);
+        P44.setLayout(P44Layout);
+        P44Layout.setHorizontalGroup(
+            P44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX44, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+        P44Layout.setVerticalGroup(
+            P44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX44, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        P45.setBackground(new java.awt.Color(204, 255, 102));
+        P45.setPreferredSize(new java.awt.Dimension(75, 55));
+        P45.setRoundBottomLeft(20);
+        P45.setRoundBottomRight(20);
+        P45.setRoundTopLeft(20);
+        P45.setRoundTopRight(20);
+
+        EX45.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        EX45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EX45MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P45Layout = new javax.swing.GroupLayout(P45);
+        P45.setLayout(P45Layout);
+        P45Layout.setHorizontalGroup(
+            P45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX45, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+        P45Layout.setVerticalGroup(
+            P45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX45, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        P46.setBackground(new java.awt.Color(204, 255, 102));
+        P46.setPreferredSize(new java.awt.Dimension(75, 55));
+        P46.setRoundBottomLeft(20);
+        P46.setRoundBottomRight(20);
+        P46.setRoundTopLeft(20);
+        P46.setRoundTopRight(20);
+
+        EX46.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        EX46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EX46MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P46Layout = new javax.swing.GroupLayout(P46);
+        P46.setLayout(P46Layout);
+        P46Layout.setHorizontalGroup(
+            P46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX46, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+        P46Layout.setVerticalGroup(
+            P46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX46, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+        );
+
+        P47.setBackground(new java.awt.Color(204, 255, 102));
+        P47.setPreferredSize(new java.awt.Dimension(75, 55));
+        P47.setRoundBottomLeft(20);
+        P47.setRoundBottomRight(20);
+        P47.setRoundTopLeft(20);
+        P47.setRoundTopRight(20);
+
+        EX47.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        EX47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EX47MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P47Layout = new javax.swing.GroupLayout(P47);
+        P47.setLayout(P47Layout);
+        P47Layout.setHorizontalGroup(
+            P47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX47, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+        P47Layout.setVerticalGroup(
+            P47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(EX47, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1213,35 +1326,6 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(P43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(P13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1269,7 +1353,46 @@ public class ExtrasParaiso extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(P42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(P42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(P44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(P47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -1313,20 +1436,26 @@ public class ExtrasParaiso extends javax.swing.JPanel {
                             .addComponent(P39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(P40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(P41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(P44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MICHELADAS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         MICHE1.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE1.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE1.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE1.setRoundBottomLeft(20);
         MICHE1.setRoundBottomRight(20);
         MICHE1.setRoundTopLeft(20);
         MICHE1.setRoundTopRight(20);
 
-        MI1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI1.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI1.setText("MI1");
         MI1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1343,17 +1472,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE1Layout.setVerticalGroup(
             MICHE1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE2.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE2.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE2.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE2.setRoundBottomLeft(20);
         MICHE2.setRoundBottomRight(20);
         MICHE2.setRoundTopLeft(20);
         MICHE2.setRoundTopRight(20);
 
-        MI2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI2.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI2.setText("MI2");
         MI2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1370,17 +1499,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE2Layout.setVerticalGroup(
             MICHE2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE3.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE3.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE3.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE3.setRoundBottomLeft(20);
         MICHE3.setRoundBottomRight(20);
         MICHE3.setRoundTopLeft(20);
         MICHE3.setRoundTopRight(20);
 
-        MI3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI3.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI3.setText("MI3");
         MI3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1397,17 +1526,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE3Layout.setVerticalGroup(
             MICHE3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE4.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE4.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE4.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE4.setRoundBottomLeft(20);
         MICHE4.setRoundBottomRight(20);
         MICHE4.setRoundTopLeft(20);
         MICHE4.setRoundTopRight(20);
 
-        MI4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI4.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI4.setText("MI4");
         MI4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1424,17 +1553,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE4Layout.setVerticalGroup(
             MICHE4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE5.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE5.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE5.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE5.setRoundBottomLeft(20);
         MICHE5.setRoundBottomRight(20);
         MICHE5.setRoundTopLeft(20);
         MICHE5.setRoundTopRight(20);
 
-        MI5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI5.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI5.setText("MI5");
         MI5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1451,17 +1580,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE5Layout.setVerticalGroup(
             MICHE5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE6.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE6.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE6.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE6.setRoundBottomLeft(20);
         MICHE6.setRoundBottomRight(20);
         MICHE6.setRoundTopLeft(20);
         MICHE6.setRoundTopRight(20);
 
-        MI6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI6.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI6.setText("MI6");
         MI6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1478,17 +1607,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE6Layout.setVerticalGroup(
             MICHE6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE7.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE7.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE7.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE7.setRoundBottomLeft(20);
         MICHE7.setRoundBottomRight(20);
         MICHE7.setRoundTopLeft(20);
         MICHE7.setRoundTopRight(20);
 
-        MI7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI7.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI7.setText("MI7");
         MI7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1505,17 +1634,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE7Layout.setVerticalGroup(
             MICHE7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE8.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE8.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE8.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE8.setRoundBottomLeft(20);
         MICHE8.setRoundBottomRight(20);
         MICHE8.setRoundTopLeft(20);
         MICHE8.setRoundTopRight(20);
 
-        MI8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI8.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI8.setText("MI8");
         MI8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1532,17 +1661,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE8Layout.setVerticalGroup(
             MICHE8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE9.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE9.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE9.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE9.setRoundBottomLeft(20);
         MICHE9.setRoundBottomRight(20);
         MICHE9.setRoundTopLeft(20);
         MICHE9.setRoundTopRight(20);
 
-        MI9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI9.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI9.setText("MI9");
         MI9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1559,17 +1688,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE9Layout.setVerticalGroup(
             MICHE9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE10.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE10.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE10.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE10.setRoundBottomLeft(20);
         MICHE10.setRoundBottomRight(20);
         MICHE10.setRoundTopLeft(20);
         MICHE10.setRoundTopRight(20);
 
-        MI10.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI10.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI10.setText("MI10");
         MI10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1586,17 +1715,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE10Layout.setVerticalGroup(
             MICHE10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE11.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE11.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE11.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE11.setRoundBottomLeft(20);
         MICHE11.setRoundBottomRight(20);
         MICHE11.setRoundTopLeft(20);
         MICHE11.setRoundTopRight(20);
 
-        MI11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI11.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI11.setText("MI11");
         MI11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1613,17 +1742,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE11Layout.setVerticalGroup(
             MICHE11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE12.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE12.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE12.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE12.setRoundBottomLeft(20);
         MICHE12.setRoundBottomRight(20);
         MICHE12.setRoundTopLeft(20);
         MICHE12.setRoundTopRight(20);
 
-        MI12.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI12.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI12.setText("MI12");
         MI12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1640,17 +1769,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE12Layout.setVerticalGroup(
             MICHE12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE13.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE13.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE13.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE13.setRoundBottomLeft(20);
         MICHE13.setRoundBottomRight(20);
         MICHE13.setRoundTopLeft(20);
         MICHE13.setRoundTopRight(20);
 
-        MI13.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI13.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI13.setText("MI13");
         MI13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1667,17 +1796,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE13Layout.setVerticalGroup(
             MICHE13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE14.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE14.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE14.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE14.setRoundBottomLeft(20);
         MICHE14.setRoundBottomRight(20);
         MICHE14.setRoundTopLeft(20);
         MICHE14.setRoundTopRight(20);
 
-        MI14.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI14.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI14.setText("MI14");
         MI14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1694,17 +1823,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE14Layout.setVerticalGroup(
             MICHE14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE15.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE15.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE15.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE15.setRoundBottomLeft(20);
         MICHE15.setRoundBottomRight(20);
         MICHE15.setRoundTopLeft(20);
         MICHE15.setRoundTopRight(20);
 
-        MI15.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI15.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI15.setText("MI15");
         MI15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1721,17 +1850,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE15Layout.setVerticalGroup(
             MICHE15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE16.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE16.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE16.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE16.setRoundBottomLeft(20);
         MICHE16.setRoundBottomRight(20);
         MICHE16.setRoundTopLeft(20);
         MICHE16.setRoundTopRight(20);
 
-        MI16.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI16.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI16.setText("MI16");
         MI16.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1748,17 +1877,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE16Layout.setVerticalGroup(
             MICHE16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE17.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE17.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE17.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE17.setRoundBottomLeft(20);
         MICHE17.setRoundBottomRight(20);
         MICHE17.setRoundTopLeft(20);
         MICHE17.setRoundTopRight(20);
 
-        MI17.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI17.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI17.setText("MI17");
         MI17.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1775,17 +1904,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE17Layout.setVerticalGroup(
             MICHE17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE18.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE18.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE18.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE18.setRoundBottomLeft(20);
         MICHE18.setRoundBottomRight(20);
         MICHE18.setRoundTopLeft(20);
         MICHE18.setRoundTopRight(20);
 
-        MI18.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI18.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI18.setText("MI18");
         MI18.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1802,17 +1931,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE18Layout.setVerticalGroup(
             MICHE18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE19.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE19.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE19.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE19.setRoundBottomLeft(20);
         MICHE19.setRoundBottomRight(20);
         MICHE19.setRoundTopLeft(20);
         MICHE19.setRoundTopRight(20);
 
-        MI19.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI19.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI19.setText("MI19");
         MI19.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1829,17 +1958,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE19Layout.setVerticalGroup(
             MICHE19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE20.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE20.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE20.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE20.setRoundBottomLeft(20);
         MICHE20.setRoundBottomRight(20);
         MICHE20.setRoundTopLeft(20);
         MICHE20.setRoundTopRight(20);
 
-        MI20.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI20.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI20.setText("MI20");
         MI20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1856,17 +1985,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE20Layout.setVerticalGroup(
             MICHE20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE21.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE21.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE21.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE21.setRoundBottomLeft(20);
         MICHE21.setRoundBottomRight(20);
         MICHE21.setRoundTopLeft(20);
         MICHE21.setRoundTopRight(20);
 
-        MI21.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI21.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI21.setText("MI21");
         MI21.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1883,17 +2012,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE21Layout.setVerticalGroup(
             MICHE21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE22.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE22.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE22.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE22.setRoundBottomLeft(20);
         MICHE22.setRoundBottomRight(20);
         MICHE22.setRoundTopLeft(20);
         MICHE22.setRoundTopRight(20);
 
-        MI22.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI22.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI22.setText("MI22");
         MI22.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1910,17 +2039,17 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE22Layout.setVerticalGroup(
             MICHE22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE23.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE23.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE23.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE23.setRoundBottomLeft(20);
         MICHE23.setRoundBottomRight(20);
         MICHE23.setRoundTopLeft(20);
         MICHE23.setRoundTopRight(20);
 
-        MI23.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        MI23.setFont(new java.awt.Font("Segoe UI", 1, 8)); // NOI18N
         MI23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MI23.setText("MI23");
         MI23.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1937,11 +2066,11 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE23Layout.setVerticalGroup(
             MICHE23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE24.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE24.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE24.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE24.setRoundBottomLeft(20);
         MICHE24.setRoundBottomRight(20);
         MICHE24.setRoundTopLeft(20);
@@ -1963,11 +2092,11 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE24Layout.setVerticalGroup(
             MICHE24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE25.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE25.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE25.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE25.setRoundBottomLeft(20);
         MICHE25.setRoundBottomRight(20);
         MICHE25.setRoundTopLeft(20);
@@ -1989,11 +2118,11 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE25Layout.setVerticalGroup(
             MICHE25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         MICHE26.setBackground(new java.awt.Color(204, 255, 102));
-        MICHE26.setPreferredSize(new java.awt.Dimension(80, 70));
+        MICHE26.setPreferredSize(new java.awt.Dimension(80, 60));
         MICHE26.setRoundBottomLeft(20);
         MICHE26.setRoundBottomRight(20);
         MICHE26.setRoundTopLeft(20);
@@ -2015,7 +2144,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         );
         MICHE26Layout.setVerticalGroup(
             MICHE26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MI26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(MI26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -2129,9 +2258,9 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -3054,7 +3183,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
     }//GEN-LAST:event_MI23MouseClicked
 
     private void MI24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MI24MouseClicked
-     /*  if ((evt.getModifiers() & 4) !=0){
+       if ((evt.getModifiers() & 4) !=0){
             codigooreden= codigoM24;
             BuscarExistencia();
             if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
@@ -3068,7 +3197,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             MICHE24.setBackground(Color.GREEN);
             timer.setRepeats(false);
             timer.start();
-        }*/
+        }
     }//GEN-LAST:event_MI24MouseClicked
 
     private void MI25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MI25MouseClicked
@@ -3106,6 +3235,36 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             timer.start();
         }*/
     }//GEN-LAST:event_MI26MouseClicked
+
+    private void EX44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX44MouseClicked
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo44;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P44.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+        }else{
+            codigooreden = codigo44;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P44.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+        }
+    }//GEN-LAST:event_EX44MouseClicked
+
+    private void EX45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX45MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EX45MouseClicked
+
+    private void EX46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX46MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EX46MouseClicked
+
+    private void EX47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX47MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EX47MouseClicked
  
     
     private void nombres(){
@@ -3200,6 +3359,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             else if (244== codigo){
              descripcion44 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_44 = result.get(i).getDescripcion2().toUpperCase(); Precio44 = result.get(i).getPrecio();codigo44 = result.get(i).getCodigo();
             }
+           
             ///////////////////////////MICHE
             else if (246== codigo){
              MICHE1_1 = result.get(i).getDescripcion1().toUpperCase(); MICHE2_1 = result.get(i).getDescripcion2().toUpperCase(); PrecioM1 = result.get(i).getPrecio(); codigoM1 = result.get(i).getCodigo();
@@ -3270,10 +3430,10 @@ public class ExtrasParaiso extends javax.swing.JPanel {
              else if (268== codigo){
              MICHE1_23 = result.get(i).getDescripcion1().toUpperCase(); MICHE2_23 = result.get(i).getDescripcion2().toUpperCase(); PrecioM23 = result.get(i).getPrecio();codigoM23 = result.get(i).getCodigo();
             }
-           /*  else if (== codigo){
+             else if (91== codigo){
              MICHE1_24 = result.get(i).getDescripcion1().toUpperCase(); MICHE2_24 = result.get(i).getDescripcion2().toUpperCase(); PrecioM24 = result.get(i).getPrecio();codigoM24 = result.get(i).getCodigo();
             }
-             else if (== codigo){
+            /* else if (== codigo){
              MICHE1_25 = result.get(i).getDescripcion1().toUpperCase(); MICHE2_25 = result.get(i).getDescripcion2().toUpperCase(); PrecioM25 = result.get(i).getPrecio();codigoM25 = result.get(i).getCodigo();
             }
              else if (== codigo){
@@ -3362,6 +3522,10 @@ public class ExtrasParaiso extends javax.swing.JPanel {
     private javax.swing.JLabel EX41;
     private javax.swing.JLabel EX42;
     private javax.swing.JLabel EX43;
+    private javax.swing.JLabel EX44;
+    private javax.swing.JLabel EX45;
+    private javax.swing.JLabel EX46;
+    private javax.swing.JLabel EX47;
     private javax.swing.JLabel EX5;
     private javax.swing.JLabel EX6;
     private javax.swing.JLabel EX7;
@@ -3442,6 +3606,10 @@ public class ExtrasParaiso extends javax.swing.JPanel {
     private ClassAngels.PanelRound P41;
     private ClassAngels.PanelRound P42;
     private ClassAngels.PanelRound P43;
+    private ClassAngels.PanelRound P44;
+    private ClassAngels.PanelRound P45;
+    private ClassAngels.PanelRound P46;
+    private ClassAngels.PanelRound P47;
     private ClassAngels.PanelRound P5;
     private ClassAngels.PanelRound P6;
     private ClassAngels.PanelRound P7;
@@ -3508,7 +3676,8 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         EX42.setText(texto42);
         String texto43 ="<html><center><body>"+descripcion43+"<br>"+descripcion2_43+"<br><font color='RED'>Q"+Precio43+"</font></body></center></html>";
         EX43.setText(texto43);
-        
+        String texto44 ="<html><center><body>"+descripcion44+"<br>"+descripcion2_44+"<br><font color='RED'>Q"+Precio44+"</font></body></center></html>";
+        EX44.setText(texto44);
         //////////////////////////////////MICHE/////////////////////////////////////////
         
         String M1 ="<html><center><body>"+MICHE1_1+"<br>"+MICHE2_1+"<br><font color='RED'>Q"+PrecioM1+"</font></body></center></html>";
@@ -3558,8 +3727,8 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         String M23 ="<html><center><body>"+MICHE1_23+"<br>"+MICHE2_23+"<br><font color='RED'>Q"+PrecioM23+"</font></body></center></html>";
         MI23.setText(M23);
         String M24 ="<html><center><body>"+MICHE1_24+"<br>"+MICHE2_24+"<br><font color='RED'>Q"+PrecioM24+"</font></body></center></html>";
-       /*MI24.setText(M24);
-        String M25 ="<html><center><body>"+MICHE1_25+"<br>"+MICHE2_25+"<br><font color='RED'>Q"+PrecioM25+"</font></body></center></html>";
+        MI24.setText(M24);
+        /*String M25 ="<html><center><body>"+MICHE1_25+"<br>"+MICHE2_25+"<br><font color='RED'>Q"+PrecioM25+"</font></body></center></html>";
         MI25.setText(M25);
         String M26 ="<html><center><body>"+MICHE1_26+"<br>"+MICHE2_26+"<br><font color='RED'>Q"+PrecioM26+"</font></body></center></html>";
         MI26.setText(M26);*/
