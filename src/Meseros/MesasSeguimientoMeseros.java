@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Inicio;
+package Meseros;
 
+import Inicio.*;
 import ClassAngels.MesasClass;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author jluis
  */
-public final class MesasSeguimiento extends javax.swing.JFrame {
+public final class MesasSeguimientoMeseros extends javax.swing.JFrame {
 
      int id_mesa;
      int noorden;
@@ -54,7 +55,7 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
     /**
      * Creates new form Mesas
      */
-    public MesasSeguimiento() {
+    public MesasSeguimientoMeseros() {
         initComponents();
         setLocationRelativeTo(null);
         habilitartodo();
@@ -1604,7 +1605,7 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_ME20MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        Ordenes F = new Ordenes();
+        OrdenesMeseros F = new OrdenesMeseros();
         F.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel22MouseClicked
@@ -1747,21 +1748,27 @@ public final class MesasSeguimiento extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MesasSeguimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasSeguimientoMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MesasSeguimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasSeguimientoMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MesasSeguimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasSeguimientoMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MesasSeguimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasSeguimientoMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-            new MesasSeguimiento().setVisible(true);
+            new MesasSeguimientoMeseros().setVisible(true);
             }
         });
     }

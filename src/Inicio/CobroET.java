@@ -5,11 +5,15 @@
 package Inicio;
 
 import BDclass.BDConexion;
+import BDclass.BDOrdenes;
+import ClassAngels.InsertarProducto;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
@@ -25,6 +29,9 @@ import net.sf.jasperreports.engine.util.JRLoader;
  */
 public class CobroET extends javax.swing.JFrame {
      int cobro;
+     int noorden;
+     String Query;
+     int ordendia;
     /**
      * Creates new form CobroET
      */
@@ -36,12 +43,14 @@ public class CobroET extends javax.swing.JFrame {
         }
         initComponents();
         setLocationRelativeTo(null);
+        noorden = b;
+        BuscarOrdenDia();
         String texto1 = "<html><center><body>TARJETA<br>EFECTIVO</body></center></html>";
         TYE.setText(texto1);
         CantEfectivo.setEditable(false);
         Canttarjeta.setEditable(false);
         total.setText(String.valueOf(a));
-        Orden.setText(String.valueOf(b));
+        Orden.setText(String.valueOf(ordendia));
         
     }
     
@@ -50,7 +59,7 @@ public class CobroET extends javax.swing.JFrame {
             BDConexion conecta = new BDConexion();
             Connection con = conecta.getConexion();
             PreparedStatement ps = null;
-            ps= con.prepareStatement("UPDATE ORDENES SET efectivo = "+CantEfectivo.getText()+",tarjeta = "+Canttarjeta.getText()+",ESTADO = 2,transferencia = 0.00 where noorden="+Orden.getText());
+            ps= con.prepareStatement("UPDATE ORDENES SET efectivo = "+CantEfectivo.getText()+",tarjeta = "+Canttarjeta.getText()+",ESTADO = 2,transferencia = 0.00 where noorden="+noorden);
             ps.executeUpdate();
             con.close();
             ps.close();
@@ -70,7 +79,7 @@ public class CobroET extends javax.swing.JFrame {
             BDConexion conecta = new BDConexion();
             Connection con = conecta.getConexion();
             PreparedStatement ps = null;
-            ps= con.prepareStatement("UPDATE ORDENES SET efectivo = "+CantEfectivo.getText()+",tarjeta = 0.00,transferencia = "+Canttarjeta.getText()+",ESTADO = 2 where noorden="+Orden.getText());
+            ps= con.prepareStatement("UPDATE ORDENES SET efectivo = "+CantEfectivo.getText()+",tarjeta = 0.00,transferencia = "+Canttarjeta.getText()+",ESTADO = 2 where noorden="+noorden);
             ps.executeUpdate();
             con.close();
             ps.close();
@@ -81,11 +90,26 @@ public class CobroET extends javax.swing.JFrame {
          Ordenes F = new Ordenes();
          F.setVisible(true);
          this.dispose();
-        
-        
  }
     
-     private void imprimir(){
+ private void BuscarOrdenDia() {
+            try {
+                BDConexion conecta = new BDConexion();
+                Connection cn = conecta.getConexion();
+                java.sql.Statement stmt = cn.createStatement();
+                ResultSet rs = stmt.executeQuery("select ordendia  from ordenes where date_format(fecha,'%d/%m/%Y') = date_format(now(),'%d/%m/%Y') and NOORDEN = "+noorden);
+                while (rs.next()) {
+                      ordendia = (rs.getInt(1));
+                }
+                rs.close();
+                stmt.close();
+                cn.close();
+            } catch (Exception error) {
+                System.out.print(error);
+            }
+        }   
+    
+    /* private void imprimir(){
       BDConexion con= new BDConexion();
          Connection conexion= con.getConexion();
         try {
@@ -97,7 +121,7 @@ public class CobroET extends javax.swing.JFrame {
         } catch (Exception e) {System.out.println("F"+e);
            JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
         }
-    }
+    }*/
      
     private void imprimirCobrodividido(){
       BDConexion con= new BDConexion();
@@ -105,13 +129,38 @@ public class CobroET extends javax.swing.JFrame {
         try {
             JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngelsPreCuentaDividida.jasper");
             Map parametros= new HashMap();
-            parametros.put("ID_ORDEN", Integer.parseInt(Orden.getText()));
+            parametros.put("ID_ORDEN", noorden);
             JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
             JasperPrintManager.printReport(print, true);
         } catch (Exception e) {System.out.println("F"+e);
            JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
         }
-    } 
+    }
+    
+    private void descargarInventario(){
+     
+          ArrayList<InsertarProducto> result = BDOrdenes.ListarCodigosPedido(noorden);
+        for (int i = 0; i < result.size(); i++) {
+          int codigo = result.get(i).getCodigo();
+          int cant = result.get(i).getCantidad();
+          try {
+             System.out.println(result.get(i).getCodigo());
+            BDConexion conecta = new BDConexion();
+            Connection con = conecta.getConexion();
+            Query = "{call Descontar("+codigo+","+cant+")}"; 
+            PreparedStatement pse = null;
+            pse= con.prepareStatement(Query);
+            pse.executeUpdate();                   
+            con.close();
+            pse.close();
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null,"ERROR = "+ex);
+        }
+          
+          
+        }
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -411,12 +460,11 @@ public class CobroET extends javax.swing.JFrame {
     private void cobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cobrarActionPerformed
        if(cobro > 0){
         if(cobro == 3){
-            if(Double.parseDouble(Canttarjeta.getText())>0 && Double.parseDouble(CantEfectivo.getText())>0){cobrarOrdenET();}
+            if(Double.parseDouble(Canttarjeta.getText())>0 && Double.parseDouble(CantEfectivo.getText())>0){cobrarOrdenET();descargarInventario();}
             else{JOptionPane.showMessageDialog(null, "EL COBRO TIENE QUE ESTAR DIVIDIDO");}
         }else{
-            
-         if(cobro ==4){cobrarOrdenTT();}else{   
-        cobrarOrdenET();}
+         if(cobro ==4){cobrarOrdenTT();descargarInventario();}else{   
+        cobrarOrdenET();descargarInventario();}
         }
        }else{JOptionPane.showMessageDialog(null, "SELECCIONAR UN METODO DE PAGO");}
              

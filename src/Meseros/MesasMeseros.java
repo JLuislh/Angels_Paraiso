@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Inicio;
+package Meseros;
 
+import Inicio.*;
 import BDclass.BDConexion;
 import ClassAngels.MesasClass;
 import java.awt.Color;
@@ -19,7 +20,7 @@ import javax.swing.JOptionPane;
  *
  * @author jluis
  */
-public final class Mesas extends javax.swing.JFrame {
+public final class MesasMeseros extends javax.swing.JFrame {
 
     int id_mesa;
     int orden;
@@ -27,7 +28,7 @@ public final class Mesas extends javax.swing.JFrame {
     /**
      * Creates new form Mesas
      */
-    public Mesas(int ord) {
+    public MesasMeseros(int ord) {
         initComponents();
         this.orden = ord;
         setLocationRelativeTo(null);
@@ -1515,7 +1516,7 @@ public final class Mesas extends javax.swing.JFrame {
             
         } catch (SQLException e) { System.out.println("ERRROR ELIMINANDO LA ORDEN EN MESAS"+e);
         }
-        Ordenes F = new Ordenes();
+        OrdenesMeseros F = new OrdenesMeseros();
         F.setVisible(true);
         this.dispose();
         
@@ -1648,14 +1649,17 @@ public final class Mesas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mesas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MesasMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

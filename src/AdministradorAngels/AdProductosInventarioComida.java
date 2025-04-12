@@ -27,13 +27,14 @@ import net.sf.jasperreports.engine.util.JRLoader;
  * @author jluis
  */
 public class AdProductosInventarioComida extends javax.swing.JPanel {
-
+     int tipo;
     /**
      * Creates new form ProductosInventario
      */
-    public AdProductosInventarioComida() {
+    public AdProductosInventarioComida(int a) {
         initComponents();
-        ListarProductosInventario();
+        this.tipo = a;
+         if(tipo == 1){ ListarProductosInventario();imprime.setEnabled(true);} else {ListarProductosInventarioSinCantidadTotal();imprime.setEnabled(false);}
     }
     
     private void imprimir(){
@@ -91,6 +92,40 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
              
      }
      
+     private void ListarProductosInventarioSinCantidadTotal(){
+     
+        ArrayList<InsertarProducto> result = BDIngresos.BDIngresosProductosInventarioComida();
+        ad(result);  
+    }
+     private void ad(ArrayList<InsertarProducto> list) {
+         DecimalFormat df = new DecimalFormat("#.00");
+              Object[][] datos = new Object[list.size()][4];
+              int i = 0;
+              for(InsertarProducto t : list)
+              {
+                  datos[i][0] = t.getIdregresoPedido();
+                  datos[i][1] = t.getDescripcion();
+                  datos[i][2] = t.getUMedida();
+                  i++;
+              }    
+             ProInventario.setModel(new javax.swing.table.DefaultTableModel(
+                datos,
+                new String[]{
+                "CODIGO","DESCRIPCION","UNIDAD MEDIDA"
+             })
+             {  
+                 @Override
+                 public boolean isCellEditable(int row, int column){
+                 return false;
+             }
+             });
+             ProInventario.getColumnModel().getColumn(1).setCellRenderer(new TextAreaRenderer());
+             TableColumn columna1 = ProInventario.getColumn("CODIGO");
+             columna1.setPreferredWidth(-20);
+             TableColumn columna2 = ProInventario.getColumn("DESCRIPCION");
+             columna2.setPreferredWidth(275);
+     }
+     
      
      
      public void GuardarProducto(){
@@ -105,7 +140,7 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Ingreso Agregado...");
             ActualizarCantidad();
             limpíar();
-            ListarProductosInventario();
+             if(tipo == 1){ ListarProductosInventario();imprime.setEnabled(true);} else {ListarProductosInventarioSinCantidadTotal();imprime.setEnabled(false);}
         } catch (Exception ex) {
             //Logger.getLogger(ConsultaPedidos.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, ex);
@@ -179,7 +214,7 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         cantidadin = new javax.swing.JTextField();
         Cargar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        imprime = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         ingresos = new javax.swing.JTable();
 
@@ -294,10 +329,10 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
                 .addGap(12, 12, 12))
         );
 
-        jButton1.setText("IMPRIMIR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        imprime.setText("IMPRIMIR");
+        imprime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                imprimeActionPerformed(evt);
             }
         });
 
@@ -321,7 +356,7 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(231, 231, 231)
-                        .addComponent(jButton1)))
+                        .addComponent(imprime)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -342,7 +377,7 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(imprime, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(173, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -364,9 +399,9 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
         Cargar.requestFocus();
     }//GEN-LAST:event_cantidadinActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void imprimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimeActionPerformed
         imprimir();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_imprimeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -375,8 +410,8 @@ public class AdProductosInventarioComida extends javax.swing.JPanel {
     private javax.swing.JTextField Descri;
     private javax.swing.JTable ProInventario;
     private javax.swing.JTextField cantidadin;
+    private javax.swing.JButton imprime;
     private javax.swing.JTable ingresos;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

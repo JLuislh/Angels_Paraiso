@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Inicio;
+package Meseros;
 
+import Inicio.*;
 import BDclass.BDConexion;
 import BDclass.BDOrdenes;
 import ClassAngels.InsertarProducto;
@@ -16,6 +17,7 @@ import SubPanelesParaiso.ConAlcoholElParaiso;
 import SubPanelesParaiso.ExtrasParaiso;
 import SubPanelesParaiso.Hamburguesas;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,6 +26,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableColumn;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -31,26 +34,29 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
+
 /**
  *
  * @author jluis
  */
-public class MenuParaLlevar extends javax.swing.JFrame {
+public class MenuMeseros extends javax.swing.JFrame {
      public static int noorden;
-     int tipomenu = 2;
-     String Query;
+     int nomesa;
+     int tipomenu = 0;
      int ordendia;
     /**
      * Creates new form Menu
      * @param a
      * @param b
      */
-    public MenuParaLlevar(int a) {
+    public MenuMeseros(int a,int b) {
         initComponents();
         setLocationRelativeTo(null);
-        MenuParaLlevar.noorden = a;
+        this.nomesa = a;
+        MenuMeseros.noorden = b;
         BuscarOrdenDia();
         Ordentxt.setText(String.valueOf(ordendia));
+        mesatxt.setText(String.valueOf(a));
         String texto1 = "<html><center><body>HAMBURGUEZAS<br>FUERA DEL MAR</body></center></html>";
         Titulo2.setText(texto1);
         String texto2 = "<html><center><body>AMANTES DEL CEVICHE<br>SABORES DEL MAR</body></center></html>";
@@ -62,10 +68,26 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         String texto5 = "<html><center><body>BOTELLAS</body></center></html>";
         Titulo6.setText(texto5);
         String texto6 = "<html><center><body>EXTRAS<br>MICHELADAS</body></center></html>";
-        Titulo8.setText(texto6);
-        ListarProductosPedidos();
-        
+        Titulo7.setText(texto6);
     }
+    
+    private void eliminarOrden(){
+        try {
+            BDConexion conecta = new BDConexion();
+            Connection con = conecta.getConexion();
+            PreparedStatement ps = null;
+            PreparedStatement p = null;
+            ps= con.prepareStatement("delete from Ordenes where noorden="+noorden);
+            p = con.prepareStatement("UPDATE MESAS SET ESTADO = 1 WHERE id_mesa =" + nomesa);
+            ps.executeUpdate();
+            p.executeUpdate();
+            con.close();
+            ps.close();
+            p.close();
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null,"ERROr = "+ex);
+        }
+ }
     
     private void BuscarOrdenDia() {
             try {
@@ -74,7 +96,7 @@ public class MenuParaLlevar extends javax.swing.JFrame {
                 java.sql.Statement stmt = cn.createStatement();
                 ResultSet rs = stmt.executeQuery("select ordendia  from ordenes where date_format(fecha,'%d/%m/%Y') = date_format(now(),'%d/%m/%Y') and NOORDEN = "+noorden);
                 while (rs.next()) {
-                      ordendia= (rs.getInt(1));
+                      ordendia = (rs.getInt(1));
                 }
                 rs.close();
                 stmt.close();
@@ -83,61 +105,6 @@ public class MenuParaLlevar extends javax.swing.JFrame {
                 System.out.print(error);
             }
         }
-    
-    private void cobrarOrden(){
-        try {
-            BDConexion conecta = new BDConexion();
-            Connection con = conecta.getConexion();
-            PreparedStatement ps = null;
-            ps= con.prepareStatement("UPDATE ORDENES SET TOTAL = "+Total.getText()+" where noorden="+noorden);
-            ps.executeUpdate();
-            con.close();
-            ps.close();
-        } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null,"ERROr = "+ex);
-        }
-        
-        CambiarVentaImprimir();
- }
-    
- private void CambiarVentaImprimir(){
-        try {
-            BDConexion conecta = new BDConexion();
-            Connection con = conecta.getConexion();
-            PreparedStatement ps = null;
-            ps= con.prepareStatement("UPDATE ventas SET estado = 2 where noorden="+noorden);
-            ps.executeUpdate();
-            con.close();
-            ps.close();
-        } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null,"ERROr = "+ex);
-        }
- }   
-    
-   /* private void descargarInventario(){
-     
-          ArrayList<InsertarProducto> result = BDOrdenes.ListarCodigosPedido(noorden);
-        for (int i = 0; i < result.size(); i++) {
-          int codigo = result.get(i).getCodigo();
-          int cant = result.get(i).getCantidad();
-          try {
-             System.out.println(result.get(i).getCodigo());
-            BDConexion conecta = new BDConexion();
-            Connection con = conecta.getConexion();
-            Query = "{call Descontar("+codigo+","+cant+")}"; 
-            PreparedStatement pse = null;
-            pse= con.prepareStatement(Query);
-            pse.executeUpdate();                   
-            con.close();
-            pse.close();
-        } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null,"ERROR = "+ex);
-        }
-          
-          
-        }
-     
-     }*/
     
 
     /**
@@ -165,9 +132,9 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         Menu6 = new ClassAngels.PanelRound();
         Titulo6 = new javax.swing.JLabel();
         Menu7 = new ClassAngels.PanelRound();
-        Titulo8 = new javax.swing.JLabel();
-        Menu8 = new ClassAngels.PanelRound();
         Titulo7 = new javax.swing.JLabel();
+        Menu8 = new ClassAngels.PanelRound();
+        Titulo8 = new javax.swing.JLabel();
         PanelMenu = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Pedidos = new javax.swing.JTable();
@@ -178,13 +145,13 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         mesatxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         Total = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1170, 640));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1060, 643));
@@ -345,12 +312,12 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         Menu7.setRoundTopLeft(20);
         Menu7.setRoundTopRight(20);
 
-        Titulo8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        Titulo8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo8.setText("EXTRAS");
-        Titulo8.addMouseListener(new java.awt.event.MouseAdapter() {
+        Titulo7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Titulo7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo7.setText("EXTRAS");
+        Titulo7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Titulo8MouseClicked(evt);
+                Titulo7MouseClicked(evt);
             }
         });
 
@@ -358,25 +325,24 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         Menu7.setLayout(Menu7Layout);
         Menu7Layout.setHorizontalGroup(
             Menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Titulo8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+            .addComponent(Titulo7, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
         Menu7Layout.setVerticalGroup(
             Menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Titulo8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addComponent(Titulo7, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        Menu8.setBackground(new java.awt.Color(255, 102, 102));
+        Menu8.setBackground(new java.awt.Color(255, 0, 0));
         Menu8.setPreferredSize(new java.awt.Dimension(140, 50));
         Menu8.setRoundTopLeft(20);
         Menu8.setRoundTopRight(20);
 
-        Titulo7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Titulo7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Cancel.png"))); // NOI18N
-        Titulo7.setText("CANCELAR");
-        Titulo7.addMouseListener(new java.awt.event.MouseAdapter() {
+        Titulo8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Titulo8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo8.setText("CANCELAR");
+        Titulo8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Titulo7MouseClicked(evt);
+                Titulo8MouseClicked(evt);
             }
         });
 
@@ -386,12 +352,14 @@ public class MenuParaLlevar extends javax.swing.JFrame {
             Menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Titulo7, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addComponent(Titulo8, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
                 .addContainerGap())
         );
         Menu8Layout.setVerticalGroup(
             Menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Titulo7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Menu8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Titulo8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -413,9 +381,9 @@ public class MenuParaLlevar extends javax.swing.JFrame {
                 .addComponent(Menu6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Menu8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -465,39 +433,44 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText(" NO. ORDEN");
         jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
-
-        Ordentxt.setEditable(false);
         jPanel6.add(Ordentxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 130, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText(" NO. MESA");
         jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 70, 20));
-
-        mesatxt.setEditable(false);
         jPanel6.add(mesatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 140, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("TOTAL");
-        jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 300, -1));
+        jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 300, -1));
 
-        Total.setEditable(false);
         Total.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Total.setForeground(new java.awt.Color(255, 0, 0));
-        Total.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel6.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 180, -1));
+        jPanel6.add(Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 170, -1));
 
-        jButton2.setBackground(new java.awt.Color(102, 255, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Dollar.png"))); // NOI18N
-        jButton2.setText("COBRAR");
-        jButton2.setPreferredSize(new java.awt.Dimension(75, 25));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setBackground(new java.awt.Color(255, 255, 153));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setText("SALIR");
+        jButton3.setPreferredSize(new java.awt.Dimension(75, 25));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 150, 40));
+        jPanel6.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 120, 50));
+
+        jButton4.setBackground(new java.awt.Color(255, 255, 153));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Print.png"))); // NOI18N
+        jButton4.setText("GENERAR ORDEN");
+        jButton4.setPreferredSize(new java.awt.Dimension(75, 25));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 170, 50));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 430, 330, 210));
 
@@ -517,6 +490,7 @@ public class MenuParaLlevar extends javax.swing.JFrame {
 
     
     public static void ListarProductosPedidos(){
+     
         ArrayList<InsertarProducto> result = BDOrdenes.ListarProductosPedidos(noorden);
         RecargarTabla(result);  
     }
@@ -575,12 +549,28 @@ public class MenuParaLlevar extends javax.swing.JFrame {
                 System.out.print(error);
             }
         }
-    private void eliminarOrden(){
+    
+    
+    private void imprimir(){
+      BDConexion con= new BDConexion();
+         Connection conexion= con.getConexion();
+        try {
+            JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngels.jasper");
+            Map parametros= new HashMap();
+            parametros.put("ID_ORDEN", noorden);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
+            JasperPrintManager.printReport(print, true);
+        } catch (Exception e) {System.out.println("F"+e);
+           JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
+        }
+    }
+    
+      private void CambiarVentaImprimir(){
         try {
             BDConexion conecta = new BDConexion();
             Connection con = conecta.getConexion();
             PreparedStatement ps = null;
-            ps= con.prepareStatement("delete from Ordenes where noorden="+noorden);
+            ps= con.prepareStatement("UPDATE ventas SET estado = 2 where noorden="+noorden);
             ps.executeUpdate();
             con.close();
             ps.close();
@@ -588,6 +578,8 @@ public class MenuParaLlevar extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null,"ERROr = "+ex);
         }
  }
+    
+    
     
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
     CaldosAntojosParaiso op1 = new CaldosAntojosParaiso(noorden,tipomenu);
@@ -651,34 +643,27 @@ public class MenuParaLlevar extends javax.swing.JFrame {
     PanelMenu.repaint();
     }//GEN-LAST:event_Titulo6MouseClicked
 
-    private void Titulo7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Titulo7MouseClicked
-         
-      
-      int resp=JOptionPane.showConfirmDialog(null,"DESEA CANCELAR LA ORDEN");
+    private void Titulo8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Titulo8MouseClicked
+     int resp=JOptionPane.showConfirmDialog(null,"DESEA CANCELAR LA ORDEN");
           if (JOptionPane.OK_OPTION == resp){
-            eliminarOrden();
-           Ordenes F = new Ordenes();
+           eliminarOrden();
+           OrdenesMeseros F = new OrdenesMeseros();
            F.setVisible(true);
            this.dispose();
-          
-      }
-
-    }//GEN-LAST:event_Titulo7MouseClicked
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-        int resp=JOptionPane.showConfirmDialog(null,"COBRAR Q."+Total.getText()+" PARA CERRAR ORDEN");
-          if (JOptionPane.OK_OPTION == resp){
-              //descargarInventario();
-              cobrarOrden();
-              CobroET F = new CobroET(Double.parseDouble(Total.getText()),noorden);
-              //CobroFacturacion F = new CobroFacturacion(Double.parseDouble(Total.getText()),noorden);
-              F.setVisible(true);
-              this.dispose();
           }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    
 
-    private void Titulo8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Titulo8MouseClicked
+    }//GEN-LAST:event_Titulo8MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       
+       CambiarVentaImprimir();
+       Ordenes F = new Ordenes();
+       F.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void Titulo7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Titulo7MouseClicked
     ExtrasParaiso op1 = new ExtrasParaiso(noorden,tipomenu);
     op1.setSize(1170, 380);
     op1.setLocation(0, 0);
@@ -686,7 +671,15 @@ public class MenuParaLlevar extends javax.swing.JFrame {
     PanelMenu.add(op1,BorderLayout.CENTER);
     PanelMenu.revalidate();
     PanelMenu.repaint();
-    }//GEN-LAST:event_Titulo8MouseClicked
+    }//GEN-LAST:event_Titulo7MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        imprimir();
+        CambiarVentaImprimir();
+       Ordenes F = new Ordenes();
+       F.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -705,13 +698,13 @@ public class MenuParaLlevar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuParaLlevar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuParaLlevar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuParaLlevar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuParaLlevar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuMeseros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -759,7 +752,8 @@ public class MenuParaLlevar extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo8;
     public static javax.swing.JTextField Total;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -770,17 +764,4 @@ public class MenuParaLlevar extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField mesatxt;
     // End of variables declaration//GEN-END:variables
- private void imprimir(){
-      BDConexion con= new BDConexion();
-         Connection conexion= con.getConexion();
-        try {
-            JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngelsPreCuenta.jasper");
-            Map parametros= new HashMap();
-            parametros.put("ID_ORDEN", Integer.parseInt(Ordentxt.getText()));
-            JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
-            JasperPrintManager.printReport(print, true);
-        } catch (Exception e) {System.out.println("F"+e);
-           JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
-        }
-    }
 }
