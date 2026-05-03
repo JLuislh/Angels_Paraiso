@@ -15,6 +15,7 @@ import SubPanelesParaiso.CevichesParaiso;
 import SubPanelesParaiso.ConAlcoholElParaiso;
 import SubPanelesParaiso.ExtrasParaiso;
 import SubPanelesParaiso.Hamburguesas;
+import SubPanelesParaiso.SoloParaLlevar;
 import java.awt.BorderLayout;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,6 +41,7 @@ public class MenuParaLlevar extends javax.swing.JFrame {
      int tipomenu = 2;
      String Query;
      int ordendia;
+     int imprime_no;
     /**
      * Creates new form Menu
      * @param a
@@ -134,7 +136,6 @@ public class MenuParaLlevar extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null,"ERROR = "+ex);
         }
           
-          
         }
      
      }*/
@@ -184,7 +185,6 @@ public class MenuParaLlevar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1170, 640));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1060, 643));
@@ -197,7 +197,7 @@ public class MenuParaLlevar extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("CALDOS / PAL ANTOJO");
+        jLabel1.setText("SOLO LLEVAR");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -589,8 +589,24 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         }
  }
     
+    
+     private void imprimirCocina(){
+      BDConexion con= new BDConexion();
+         Connection conexion= con.getConexion();
+        try {
+            JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngels.jasper");
+            Map parametros= new HashMap();
+            parametros.put("ID_ORDEN", noorden);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
+            JasperPrintManager.printReport(print, false);
+        } catch (Exception e) {System.out.println("F"+e);
+           JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
+        }
+    }
+    
+    
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-    CaldosAntojosParaiso op1 = new CaldosAntojosParaiso(noorden,tipomenu);
+    SoloParaLlevar op1 = new SoloParaLlevar(noorden,tipomenu);
     op1.setSize(1170, 380);
     op1.setLocation(0, 0);
     PanelMenu.removeAll();
@@ -670,6 +686,7 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         int resp=JOptionPane.showConfirmDialog(null,"COBRAR Q."+Total.getText()+" PARA CERRAR ORDEN");
           if (JOptionPane.OK_OPTION == resp){
               //descargarInventario();
+              Buscarimprimir_o_no();
               cobrarOrden();
               CobroET F = new CobroET(Double.parseDouble(Total.getText()),noorden);
               //CobroFacturacion F = new CobroFacturacion(Double.parseDouble(Total.getText()),noorden);
@@ -783,4 +800,26 @@ public class MenuParaLlevar extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
         }
     }
+ 
+public void Buscarimprimir_o_no() {
+    String sql = "SELECT COUNT(*) FROM ventas WHERE NOORDEN = ? AND estado = 1 AND tipo = 1";
+
+    try (Connection cn = new BDConexion().getConexion();
+         PreparedStatement stmt = cn.prepareStatement(sql)) {
+         
+        stmt.setInt(1, noorden);
+        try (ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                imprime_no = rs.getInt(1);
+
+                if (imprime_no == 1) {
+                    imprimirCocina();
+                } 
+            }
+        }
+    } catch (Exception e) {
+        System.err.println("Error al buscar si imprimir o no: " + e.getMessage());
+    }
+}
+
 }

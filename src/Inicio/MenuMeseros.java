@@ -25,6 +25,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableColumn;
@@ -32,6 +34,8 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.export.JRPrintServiceExporter;
+import net.sf.jasperreports.engine.export.JRPrintServiceExporterParameter;
 import net.sf.jasperreports.engine.util.JRLoader;
 
 /**
@@ -552,13 +556,13 @@ public class MenuMeseros extends javax.swing.JFrame {
     
     private void imprimir(){
       BDConexion con= new BDConexion();
-         Connection conexion= con.getConexion();
+      Connection conexion= con.getConexion();
         try {
             JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngels.jasper");
             Map parametros= new HashMap();
             parametros.put("ID_ORDEN", noorden);
             JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
-            JasperPrintManager.printReport(print, true);
+            JasperPrintManager.printReport(print, false);
         } catch (Exception e) {System.out.println("F"+e);
            JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
         }
@@ -755,4 +759,47 @@ public class MenuMeseros extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField mesatxt;
     // End of variables declaration//GEN-END:variables
+
+    private void imprimir2() {
+    BDConexion con = new BDConexion();
+    Connection conexion = con.getConexion();
+    try {
+        JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngels.jasper");
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("ID_ORDEN", noorden);
+
+        JasperPrint print = JasperFillManager.fillReport(jasperReport, parametros, conexion);
+
+        // Aquí buscas la impresora por su nombre
+        String nombreImpresora = "CAJA"; // Cambia esto por el nombre de tu impresora
+        PrintService[] services = PrintServiceLookup.lookupPrintServices(null, null);
+        PrintService selectedService = null;
+
+        for (PrintService service : services) {
+            if (service.getName().equalsIgnoreCase(nombreImpresora)) {
+                selectedService = service;
+                break;
+            }
+        }
+
+        if (selectedService != null) {
+            JRPrintServiceExporter exporter = new JRPrintServiceExporter();
+            exporter.setParameter(JRPrintServiceExporterParameter.JASPER_PRINT, print);
+            exporter.setParameter(JRPrintServiceExporterParameter.PRINT_SERVICE, selectedService);
+            exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PAGE_DIALOG, false);
+            exporter.setParameter(JRPrintServiceExporterParameter.DISPLAY_PRINT_DIALOG, false);
+            exporter.exportReport();
+        } else {
+            JOptionPane.showMessageDialog(null, "Impresora '" + nombreImpresora + "' no encontrada.");
+        }
+
+    } catch (Exception e) {
+        System.out.println("F" + e);
+        JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  " + e);
+    }
+}
+    
+    
+    
+
 }

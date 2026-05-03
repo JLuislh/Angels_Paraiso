@@ -44,7 +44,7 @@ public class Administracion extends javax.swing.JFrame {
         T7.setText(texto7);
         String texto8 = "<html><center><body>VOLVER<br>A<br>INICIO</body></center></html>";
         T8.setText(texto8);
-        String texto9 = "<html><center><body>REPORTES<br>DE<br>VENTAS</body></center></html>";
+        String texto9 = "<html><center><body>ADELANTOS<br>DE<br>EMPLEADOS</body></center></html>";
         T9.setText(texto9);
     }
     
@@ -311,7 +311,7 @@ public class Administracion extends javax.swing.JFrame {
 
         T9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         T9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        T9.setText("CONTROL");
+        T9.setText("ADELANTOS");
         T9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 T9MouseClicked(evt);
@@ -559,7 +559,7 @@ public class Administracion extends javax.swing.JFrame {
     }//GEN-LAST:event_T8MouseEntered
 
     private void T9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_T9MouseClicked
-     ReportesIngresosLocales op2 = new ReportesIngresosLocales();
+     AdelantosEmpleados op2 = new AdelantosEmpleados();
         op2.setSize(1140, 635);
         op2.setLocation(0, 0);
         PANEL.removeAll();

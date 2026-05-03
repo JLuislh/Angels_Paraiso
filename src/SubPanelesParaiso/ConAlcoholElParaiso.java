@@ -67,6 +67,8 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
  String descripcion38;	String descripcion2_38;	 String Precio38; int codigo38;
  String descripcion39;	String descripcion2_39;	 String Precio39; int codigo39;
  String descripcion40;	String descripcion2_40;	 String Precio40; int codigo40;
+ String descripcion41;	String descripcion2_41;	 String Precio41; int codigo41;
+ String descripcion42;	String descripcion2_42;	 String Precio42; int codigo42;
  int noorden;
  int codigooreden;
  int existe = 0;
@@ -132,6 +134,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
        P38.setBackground(Original);
        P40.setBackground(Original);
        P41.setBackground(Original);
+       P42.setBackground(Original);
      }
     });
     
@@ -379,6 +382,8 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         DRIN13 = new javax.swing.JLabel();
         P40 = new ClassAngels.PanelRound();
         DRIN12 = new javax.swing.JLabel();
+        P42 = new ClassAngels.PanelRound();
+        DRIN14 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1170, 368));
@@ -1196,7 +1201,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P12.setLayout(P12Layout);
         P12Layout.setHorizontalGroup(
             P12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
         P12Layout.setVerticalGroup(
             P12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1325,7 +1330,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "DRINKS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
         P13.setBackground(new java.awt.Color(204, 255, 102));
-        P13.setPreferredSize(new java.awt.Dimension(100, 65));
+        P13.setPreferredSize(new java.awt.Dimension(90, 65));
         P13.setRoundBottomLeft(20);
         P13.setRoundBottomRight(20);
         P13.setRoundTopLeft(20);
@@ -1333,7 +1338,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN3.setText("13");
+        DRIN3.setText("DRIN3");
         DRIN3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN3MouseClicked(evt);
@@ -1344,7 +1349,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P13.setLayout(P13Layout);
         P13Layout.setHorizontalGroup(
             P13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P13Layout.setVerticalGroup(
             P13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1352,7 +1357,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P14.setBackground(new java.awt.Color(204, 255, 102));
-        P14.setPreferredSize(new java.awt.Dimension(100, 65));
+        P14.setPreferredSize(new java.awt.Dimension(90, 65));
         P14.setRoundBottomLeft(20);
         P14.setRoundBottomRight(20);
         P14.setRoundTopLeft(20);
@@ -1360,7 +1365,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN4.setText("14");
+        DRIN4.setText("DRIN4");
         DRIN4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN4MouseClicked(evt);
@@ -1371,7 +1376,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P14.setLayout(P14Layout);
         P14Layout.setHorizontalGroup(
             P14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P14Layout.setVerticalGroup(
             P14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1379,7 +1384,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P15.setBackground(new java.awt.Color(204, 255, 102));
-        P15.setPreferredSize(new java.awt.Dimension(100, 65));
+        P15.setPreferredSize(new java.awt.Dimension(90, 65));
         P15.setRoundBottomLeft(20);
         P15.setRoundBottomRight(20);
         P15.setRoundTopLeft(20);
@@ -1387,7 +1392,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN5.setText("15");
+        DRIN5.setText("DRIN5");
         DRIN5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN5MouseClicked(evt);
@@ -1398,7 +1403,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P15.setLayout(P15Layout);
         P15Layout.setHorizontalGroup(
             P15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P15Layout.setVerticalGroup(
             P15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1406,7 +1411,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P16.setBackground(new java.awt.Color(204, 255, 102));
-        P16.setPreferredSize(new java.awt.Dimension(100, 65));
+        P16.setPreferredSize(new java.awt.Dimension(90, 65));
         P16.setRoundBottomLeft(20);
         P16.setRoundBottomRight(20);
         P16.setRoundTopLeft(20);
@@ -1414,7 +1419,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN6.setText("16");
+        DRIN6.setText("DRIN6");
         DRIN6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN6MouseClicked(evt);
@@ -1425,7 +1430,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P16.setLayout(P16Layout);
         P16Layout.setHorizontalGroup(
             P16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P16Layout.setVerticalGroup(
             P16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1433,7 +1438,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P18.setBackground(new java.awt.Color(204, 255, 102));
-        P18.setPreferredSize(new java.awt.Dimension(100, 65));
+        P18.setPreferredSize(new java.awt.Dimension(90, 65));
         P18.setRoundBottomLeft(20);
         P18.setRoundBottomRight(20);
         P18.setRoundTopLeft(20);
@@ -1441,7 +1446,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN8.setText("18");
+        DRIN8.setText("DRIN8");
         DRIN8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN8MouseClicked(evt);
@@ -1452,7 +1457,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P18.setLayout(P18Layout);
         P18Layout.setHorizontalGroup(
             P18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P18Layout.setVerticalGroup(
             P18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1460,7 +1465,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P19.setBackground(new java.awt.Color(204, 255, 102));
-        P19.setPreferredSize(new java.awt.Dimension(100, 65));
+        P19.setPreferredSize(new java.awt.Dimension(90, 65));
         P19.setRoundBottomLeft(20);
         P19.setRoundBottomRight(20);
         P19.setRoundTopLeft(20);
@@ -1468,7 +1473,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN9.setText("19");
+        DRIN9.setText("DRIN9");
         DRIN9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN9MouseClicked(evt);
@@ -1479,7 +1484,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P19.setLayout(P19Layout);
         P19Layout.setHorizontalGroup(
             P19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN9, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P19Layout.setVerticalGroup(
             P19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1487,7 +1492,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P20.setBackground(new java.awt.Color(204, 255, 102));
-        P20.setPreferredSize(new java.awt.Dimension(100, 65));
+        P20.setPreferredSize(new java.awt.Dimension(90, 65));
         P20.setRoundBottomLeft(20);
         P20.setRoundBottomRight(20);
         P20.setRoundTopLeft(20);
@@ -1495,7 +1500,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN10.setText("20");
+        DRIN10.setText("DRIN10");
         DRIN10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN10MouseClicked(evt);
@@ -1506,7 +1511,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P20.setLayout(P20Layout);
         P20Layout.setHorizontalGroup(
             P20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN10, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P20Layout.setVerticalGroup(
             P20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1514,7 +1519,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P17.setBackground(new java.awt.Color(204, 255, 102));
-        P17.setPreferredSize(new java.awt.Dimension(100, 65));
+        P17.setPreferredSize(new java.awt.Dimension(90, 65));
         P17.setRoundBottomLeft(20);
         P17.setRoundBottomRight(20);
         P17.setRoundTopLeft(20);
@@ -1522,7 +1527,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN7.setText("17");
+        DRIN7.setText("DRIN7");
         DRIN7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN7MouseClicked(evt);
@@ -1533,7 +1538,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P17.setLayout(P17Layout);
         P17Layout.setHorizontalGroup(
             P17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P17Layout.setVerticalGroup(
             P17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1541,7 +1546,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P41.setBackground(new java.awt.Color(204, 255, 102));
-        P41.setPreferredSize(new java.awt.Dimension(100, 65));
+        P41.setPreferredSize(new java.awt.Dimension(90, 65));
         P41.setRoundBottomLeft(20);
         P41.setRoundBottomRight(20);
         P41.setRoundTopLeft(20);
@@ -1549,7 +1554,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN13.setText("22");
+        DRIN13.setText("DRIN13");
         DRIN13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN13MouseClicked(evt);
@@ -1560,7 +1565,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P41.setLayout(P41Layout);
         P41Layout.setHorizontalGroup(
             P41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN13, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P41Layout.setVerticalGroup(
             P41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1568,7 +1573,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         );
 
         P40.setBackground(new java.awt.Color(204, 255, 102));
-        P40.setPreferredSize(new java.awt.Dimension(100, 65));
+        P40.setPreferredSize(new java.awt.Dimension(90, 65));
         P40.setRoundBottomLeft(20);
         P40.setRoundBottomRight(20);
         P40.setRoundTopLeft(20);
@@ -1576,7 +1581,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
 
         DRIN12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         DRIN12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DRIN12.setText("21");
+        DRIN12.setText("DRIN12");
         DRIN12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DRIN12MouseClicked(evt);
@@ -1587,11 +1592,38 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
         P40.setLayout(P40Layout);
         P40Layout.setHorizontalGroup(
             P40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DRIN12, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(DRIN12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         P40Layout.setVerticalGroup(
             P40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(DRIN12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+        );
+
+        P42.setBackground(new java.awt.Color(204, 255, 102));
+        P42.setPreferredSize(new java.awt.Dimension(90, 65));
+        P42.setRoundBottomLeft(20);
+        P42.setRoundBottomRight(20);
+        P42.setRoundTopLeft(20);
+        P42.setRoundTopRight(20);
+
+        DRIN14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        DRIN14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DRIN14.setText("DRIN14");
+        DRIN14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DRIN14MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P42Layout = new javax.swing.GroupLayout(P42);
+        P42.setLayout(P42Layout);
+        P42Layout.setHorizontalGroup(
+            P42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(DRIN14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        P42Layout.setVerticalGroup(
+            P42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(DRIN14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1618,6 +1650,8 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
                 .addComponent(P41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(P40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(P42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -1625,6 +1659,7 @@ public class ConAlcoholElParaiso extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(P42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2379,6 +2414,24 @@ if ((evt.getModifiers() & 4) !=0){
             timer.start();
        }
     }//GEN-LAST:event_DRIN13MouseClicked
+
+    private void DRIN14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DRIN14MouseClicked
+       if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo42;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P42.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+          }else{
+            codigooreden = codigo42;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P42.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+       }
+    }//GEN-LAST:event_DRIN14MouseClicked
 private void nombres(){
     ArrayList<EtiquetasClass> result = EtiquetasClass.ListaEtiquetasBebidasAlcohol();
         for (int i = 0; i < result.size(); i++) {
@@ -2417,7 +2470,7 @@ private void nombres(){
              else if (220== codigo){
              descripcion11 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_11 = result.get(i).getDescripcion2().toUpperCase(); Precio11 = result.get(i).getPrecio();codigo11 = result.get(i).getCodigo();
             }
-            /* else if (86== codigo){
+            /* else if (86== codigo){//CHISPUDA
              descripcion12 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_12 = result.get(i).getDescripcion2().toUpperCase(); Precio12 = result.get(i).getPrecio();codigo12 = result.get(i).getCodigo();
             }*/
              else if (87== codigo){
@@ -2504,6 +2557,10 @@ private void nombres(){
             else if (203== codigo){
              descripcion40 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_40 = result.get(i).getDescripcion2().toUpperCase(); Precio40 = result.get(i).getPrecio();codigo40 = result.get(i).getCodigo();
             }
+            
+            else if (280== codigo){
+             descripcion42 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_42 = result.get(i).getDescripcion2().toUpperCase(); Precio42 = result.get(i).getPrecio();codigo42 = result.get(i).getCodigo();
+            }
         }
   }
 
@@ -2541,6 +2598,7 @@ private void nombres(){
     private javax.swing.JLabel DRIN10;
     private javax.swing.JLabel DRIN12;
     private javax.swing.JLabel DRIN13;
+    private javax.swing.JLabel DRIN14;
     private javax.swing.JLabel DRIN2;
     private javax.swing.JLabel DRIN3;
     private javax.swing.JLabel DRIN4;
@@ -2584,6 +2642,7 @@ private void nombres(){
     private ClassAngels.PanelRound P4;
     private ClassAngels.PanelRound P40;
     private ClassAngels.PanelRound P41;
+    private ClassAngels.PanelRound P42;
     private ClassAngels.PanelRound P5;
     private ClassAngels.PanelRound P6;
     private ClassAngels.PanelRound P7;
@@ -2616,7 +2675,7 @@ private void Etiquetas() {
         CER10.setText(texto10);
         String texto11 ="<html><center><body>"+descripcion11+"<br>"+descripcion2_11+"<br><font color='RED'>Q"+Precio11+"</font></body></center></html>";
         DRIN1.setText(texto11);
-        /*String texto12 ="<html><center><body>"+descripcion12+"<br>"+descripcion2_12+"<br><font color='RED'>Q"+Precio12+"</font></body></center></html>";
+       /* String texto12 ="<html><center><body>"+descripcion12+"<br>"+descripcion2_12+"<br><font color='RED'>Q"+Precio12+"</font></body></center></html>";
         DRIN2.setText(texto12);*/
         String texto13 ="<html><center><body>"+descripcion13+"<br>"+descripcion2_13+"<br><font color='RED'>Q"+Precio13+"</font></body></center></html>";
         DRIN3.setText(texto13);
@@ -2674,6 +2733,8 @@ private void Etiquetas() {
         DRIN12.setText(texto39);
         String texto40 ="<html><center><body>"+descripcion40+"<br>"+descripcion2_40+"<br><font color='RED'>Q"+Precio40+"</font></body></center></html>";
         DRIN13.setText(texto40);
+        String texto42 ="<html><center><body>"+descripcion42+"<br>"+descripcion2_42+"<br><font color='RED'>Q"+Precio42+"</font></body></center></html>";
+        DRIN14.setText(texto42);
          
     }
 

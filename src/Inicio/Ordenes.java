@@ -9,33 +9,18 @@ import AdministradorAngels.Inventario;
 import BDclass.BDConexion;
 import BDclass.BDOrdenes;
 import ClassAngels.OrdenesClass;
-import FELclass.Token;
-import Pedidos.AceptarPedido;
-import Pedidos.InicioPedido;
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
-//import com.mysql.cj.xdevapi.Client;
-//mport jakarta.ws.rs.client.ClientBuilder;
-//import jakarta.ws.rs.client.Entity;
-//import jakarta.ws.rs.client.Invocation;
-//import jakarta.ws.rs.client.WebTarget;
+import PedidosApi.AceptarPedidoApi;
+import PedidosApi.InicioPedidoApi;
+
 import java.awt.Image;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-//import okhttp3.Response;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
 
 
 /**
@@ -44,8 +29,6 @@ import javax.ws.rs.core.Response;
  */
 public class Ordenes extends javax.swing.JFrame {
    int noorden;
-    String Token;
-    String FechaExp;
     /**
      * Creates new form Ordenes
      */
@@ -266,7 +249,7 @@ public class Ordenes extends javax.swing.JFrame {
         GASTOS.setLayout(GASTOSLayout);
         GASTOSLayout.setHorizontalGroup(
             GASTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         GASTOSLayout.setVerticalGroup(
             GASTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,8 +359,9 @@ public class Ordenes extends javax.swing.JFrame {
                                 .addComponent(PEDIDO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(RECIBIR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(GASTOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ADMINISTRAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(GASTOS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ADMINISTRAR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -458,15 +442,23 @@ public class Ordenes extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        InicioPedido F = new InicioPedido();
-        F.setVisible(true);
-        this.dispose();
+       try {
+           InicioPedidoApi F = new InicioPedidoApi();
+           F.setVisible(true);
+           this.dispose();
+       } catch (Exception ex) {
+           Logger.getLogger(Ordenes.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        AceptarPedido F = new AceptarPedido();
-        F.setVisible(true);
-        this.dispose();
+       try {
+           AceptarPedidoApi F = new AceptarPedidoApi();
+           F.setVisible(true);
+           this.dispose();
+       } catch (Exception ex) {
+           Logger.getLogger(Ordenes.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -475,45 +467,7 @@ public class Ordenes extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
-      private void token(){
-         // System.out.println("llega token");
-       String res = "";
-       //String URL = "https://felgttestaws.digifact.com.gt/gt.com.apinuc/api/login/get_token";
-       String URL = "https://felgtaws.digifact.com.gt/gt.com.apinuc/api/login/get_token";
-        
-        try {
-            Client client = ClientBuilder.newClient();
-            WebTarget target = client.target(URL );
-            Invocation.Builder solicitud = target.request();
-            Token req = new Token();
-            req.setUsername("GT.000120011662.120011662");//NIT EMPRESA y USUARIO DIGIFAC
-            req.setPassword("Factur4$Fel");//CONTRASEÑA DIGIFAC
-            Gson gson = new Gson();
-            String jsonString = gson.toJson(req);
-            Response post = solicitud.post(Entity.json(jsonString));
-            String resJson = post.readEntity(String.class);
-            res = resJson;
-            String fichero = "";
-            fichero = resJson;
-            Properties properties = gson.fromJson(fichero, Properties.class);
-            Token = (String) properties.get("Token");
-            FechaExp = (String) properties.get("expira_en");
-        } catch (JsonSyntaxException e) {
-            System.out.println("ERROR" );res = e.toString();
-        }
     
-        BDConexion conecta = new BDConexion();
-        Connection con = conecta.getConexion();
-        PreparedStatement sm = null;
-        try {
-            sm = con.prepareStatement("update token set Token = '"+Token+"',fecha = '"+FechaExp+"' where idToken = 1");
-            sm.executeUpdate();
-            con.close();
-            sm.close();
-        } catch (SQLException ex) {
-            System.out.println("ERROR =" + ex);
-        }
-    }
     
     
     /**

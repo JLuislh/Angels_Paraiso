@@ -35,37 +35,69 @@ import net.sf.jasperreports.engine.util.JRLoader;
  * @author jluis
  */
 public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
+
     String Fechain;
     int ID_TOTAL;
     String Fecha;
     String Fechafin;
     Double SUMATOTAL;
     int cantidadOrdenes;
+    int noorden;
+
     /**
      * Creates new form TotalEnCaja
      */
     public AdTotalEnCajaParaiso() {
         initComponents();
+
+        OrdenesDia.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                if (e.getClickCount() == 2 && !e.isConsumed()) {
+                    e.consume();
+
+                    int fila = OrdenesDia.rowAtPoint(e.getPoint());      // Fila seleccionada
+                    int columna = OrdenesDia.columnAtPoint(e.getPoint()); // Columna seleccionada
+                    if (fila != -1) {
+                        // Ejecuta lo que quieras
+                        BuscarNoOrden();
+                        imprimir();
+                    }
+                }
+            }
+        });
+
     }
-    
-    private void generarFechas(){
-    
-         ////////SUMAR UN DIA A FECHA
-         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
-         Fechain = df.format(Fe.getDate());
-         Date Fecha = Fe.getDate();
-         
-         
-         
+
+    private void generarFechas() {
+
+        ////////SUMAR UN DIA A FECHA
+        DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+        Fechain = df.format(Fe.getDate());
+        Date Fecha = Fe.getDate();
+
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(Fecha);
         calendar.add(Calendar.DAY_OF_MONTH, 1);
         SimpleDateFormat fe = new SimpleDateFormat("yyyy/MM/dd");
         Fechafin = fe.format(calendar.getTime());
-        
-       
+
         ////////FIN DE SUMAR UN DIA A FECHA
-    
+    }
+
+    private void imprimir() {
+        BDConexion con = new BDConexion();
+        Connection conexion = con.getConexion();
+        try {
+            JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\TiketAngelsPreCuenta.jasper");
+            Map parametros = new HashMap();
+            parametros.put("ID_ORDEN", noorden);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport, parametros, conexion);
+            JasperPrintManager.printReport(print, true);
+        } catch (Exception e) {
+            System.out.println("F" + e);
+            JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  " + e);
+        }
     }
 
     /**
@@ -272,101 +304,102 @@ public class AdTotalEnCajaParaiso extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
-         if(Fe.getDate() != null){ 
-        ListarOrdenes();
-             try { 
-                 IngresoVentaDia();
-             } catch (SQLException ex) {
-                 Logger.getLogger(AdTotalEnCajaParaiso.class.getName()).log(Level.SEVERE, null, ex);
-                 System.out.println("A = "+ex);}
-         }
-         else{
-        JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
+
+        if (Fe.getDate() != null) {
+            ListarOrdenes();
+            try {
+                IngresoVentaDia();
+            } catch (SQLException ex) {
+                Logger.getLogger(AdTotalEnCajaParaiso.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("A = " + ex);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-  
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         ValidarOrdenes();
         generarFechas();
-        if(Fe.getDate() != null){ 
-        if(cantidadOrdenes>0){JOptionPane.showMessageDialog(null, "Imprimira un total parcial, ya que aun hay Ordenes de Mesas Pendientes de cerrar, cerrar todas para tener un TOTAL FINAL");}
-        /*DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        if (Fe.getDate() != null) {
+            if (cantidadOrdenes > 0) {
+                JOptionPane.showMessageDialog(null, "Imprimira un total parcial, ya que aun hay Ordenes de Mesas Pendientes de cerrar, cerrar todas para tener un TOTAL FINAL");
+            }
+            /*DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
          Fechain = df.format(Fe.getDate());*/
-       BDConexion con= new BDConexion();
-       Connection conexion= con.getConexion();
-        try {
-            JasperReport jasperReport=(JasperReport)JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ENCAJAELPARAISO.jasper");
-            Map parametros= new HashMap();
-            parametros.put("FECHAFIN", Fechafin+" 02:00:00");
-            parametros.put("FECHAIN", Fechain+" 02:00:00");
-            parametros.put("FECHA", Fecha);
-            System.out.println(parametros);
-            JasperPrint print = JasperFillManager.fillReport(jasperReport,parametros, conexion);
-            JasperPrintManager.printReport(print, true);
-        } catch (Exception e) {System.out.println("F"+e);
-           JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  "+e);
-        }
-        }else{
-        
-        JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
-        
+            BDConexion con = new BDConexion();
+            Connection conexion = con.getConexion();
+            try {
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObjectFromFile("C:\\Reportes\\ANGELS\\ENCAJAELPARAISO.jasper");
+                Map parametros = new HashMap();
+                parametros.put("FECHAFIN", Fechafin + " 02:00:00");
+                parametros.put("FECHAIN", Fechain + " 02:00:00");
+                parametros.put("FECHA", Fecha);
+                System.out.println(parametros);
+                JasperPrint print = JasperFillManager.fillReport(jasperReport, parametros, conexion);
+                JasperPrintManager.printReport(print, true);
+            } catch (Exception e) {
+                System.out.println("F" + e);
+                JOptionPane.showMessageDialog(null, "ERROR EJECUTAR REPORTES =  " + e);
+            }
+        } else {
+
+            JOptionPane.showMessageDialog(null, "INGRESE UNA FECHA...");
+
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void ListarOrdenes() {
 
-     private void ListarOrdenes(){
-       
         generarFechas();
-        
-        ArrayList<InsertarProducto> result = BDOrdenes.OrdenesParaiso(Fechain,Fechafin);
-        RecargarTablaDetallado(result);  
+
+        ArrayList<InsertarProducto> result = BDOrdenes.OrdenesParaiso(Fechain, Fechafin);
+        RecargarTablaDetallado(result);
     }
-     private void RecargarTablaDetallado(ArrayList<InsertarProducto> list) {
-         DecimalFormat df = new DecimalFormat("#.00");
-              Object[][] datos = new Object[list.size()][3];
-              int i = 0;
-              for(InsertarProducto t : list)
-              {
-                  datos[i][0] = t.getNoOrden();
-                  datos[i][1] = t.getFecha();
-                  datos[i][2] = df.format(t.getTotal());
-                  i++;
-              }    
-             OrdenesDia.setModel(new javax.swing.table.DefaultTableModel(
+
+    private void RecargarTablaDetallado(ArrayList<InsertarProducto> list) {
+        DecimalFormat df = new DecimalFormat("#.00");
+        Object[][] datos = new Object[list.size()][3];
+        int i = 0;
+        for (InsertarProducto t : list) {
+            datos[i][0] = t.getNoOrden();
+            datos[i][1] = t.getFecha();
+            datos[i][2] = df.format(t.getTotal());
+            i++;
+        }
+        OrdenesDia.setModel(new javax.swing.table.DefaultTableModel(
                 datos,
                 new String[]{
-                "NO ORDEN","FECHA","TOTAL"
-             })
-             {  
-                 @Override
-                 public boolean isCellEditable(int row, int column){
-                 return false;
+                    "NO ORDEN", "FECHA", "TOTAL"
+                }) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
 
-             }
-             });
-             OrdenesDia.getColumnModel().getColumn(1).setCellRenderer(new TextAreaRenderer());
-             TableColumn columna1 = OrdenesDia.getColumn("NO ORDEN");
-             columna1.setPreferredWidth(-20);
-             TableColumn columna2 = OrdenesDia.getColumn("FECHA");
-             columna2.setPreferredWidth(275);
-             TableColumn columna3 = OrdenesDia.getColumn("TOTAL");
-             columna3.setPreferredWidth(35);
-           BuscarTotal();
-     }
-     
-     private void BuscarTotal(){
-         SumaTotalGastos();
-     DecimalFormat df = new DecimalFormat("#0.00");
-        
-try {
-            InsertarProducto c = BDOrdenes.BuscarTotalParaiso(Fechain,Fechafin);
+            }
+        });
+        OrdenesDia.getColumnModel().getColumn(1).setCellRenderer(new TextAreaRenderer());
+        TableColumn columna1 = OrdenesDia.getColumn("NO ORDEN");
+        columna1.setPreferredWidth(-20);
+        TableColumn columna2 = OrdenesDia.getColumn("FECHA");
+        columna2.setPreferredWidth(275);
+        TableColumn columna3 = OrdenesDia.getColumn("TOTAL");
+        columna3.setPreferredWidth(35);
+        BuscarTotal();
+    }
+
+    private void BuscarTotal() {
+        SumaTotalGastos();
+        DecimalFormat df = new DecimalFormat("#0.00");
+
+        try {
+            InsertarProducto c = BDOrdenes.BuscarTotalParaiso(Fechain, Fechafin);
             Noordenes.setText(String.valueOf(c.getNoOrden()));
             EFECTIVO.setText(String.valueOf(df.format(c.getEfectivo())));
             Double e = (Double.parseDouble(df.format(c.getEfectivo())));
-            Double f = (Double.parseDouble(df.format(SUMATOTAL)));   
-            Double Resultado2 = e-f;
+            Double f = (Double.parseDouble(df.format(SUMATOTAL)));
+            Double Resultado2 = e - f;
             EFECTIVOMENOSGASTOS.setText((df.format(Resultado2)));
             TARJETA.setText(String.valueOf(df.format(c.getTarjeta())));
             TRANFERENCIA.setText(String.valueOf(df.format(c.getTransferencia())));
@@ -375,131 +408,127 @@ try {
             //Double b = (Double.parseDouble(df.format(SUMATOTAL)));   
             //Double Resultado = a-b;
             Total.setText((df.format(c.getTotal())));
-          
+
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "error mas"+e);
-        } 
-     }
-     
-     
-      public void ValidarOrdenes() {
-            try {
-                 BDConexion conecta = new BDConexion();
-                Connection cn = conecta.getConexion();
-                java.sql.Statement stmt = cn.createStatement();
-                ResultSet rs = stmt.executeQuery("select count(noorden) cantidad from ordenes where estado = 1");
-                while (rs.next()) {
-                      cantidadOrdenes = rs.getInt(1);
-                   // Total.setText(String.valueOf(TOTAL));
-                }
-                rs.close();
-                stmt.close();
-                cn.close();
-            } catch (Exception error) {
-                System.out.print(error);
-            }
+            JOptionPane.showMessageDialog(null, "error mas" + e);
         }
-      
-      public void SumaTotalGastos() {
-          
-         DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-         Fecha = f.format(Fe.getDate());
-            try {
-                BDConexion conecta = new BDConexion();
-                Connection cn = conecta.getConexion();
-                java.sql.Statement stmt = cn.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT sum(Precio) as TotalGasto FROM GASTOSDIARIOS WHERE date_format(FECHA,'%d/%m/%Y') ='"+Fecha+"'");
-                while (rs.next()) {
-                      SUMATOTAL = rs.getDouble(1);
-                   // Total.setText(String.valueOf(TOTAL));
-                }
-                rs.close();
-                stmt.close();
-                cn.close();
-            } catch (Exception error) {
-                System.out.print(error);
-            }
-            ListarGastos();
-        }
-      
-    private void ListarGastos(){
-        
-        
-        ArrayList<InsertarProducto> result = BDIngresos.ListarGastosTotal(Fecha);
-        RecargarGas(result);  
     }
-     private void RecargarGas(ArrayList<InsertarProducto> list) {
-              Object[][] datos = new Object[list.size()][2];
-              int i = 0;
-              for(InsertarProducto t : list)
-              {
-                  datos[i][0] = t.getDescripcion();
-                  datos[i][1] = t.getTotal();
-                
-                  i++;
-              }    
-             Gast.setModel(new javax.swing.table.DefaultTableModel(
+
+    public void ValidarOrdenes() {
+        try {
+            BDConexion conecta = new BDConexion();
+            Connection cn = conecta.getConexion();
+            java.sql.Statement stmt = cn.createStatement();
+            ResultSet rs = stmt.executeQuery("select count(noorden) cantidad from ordenes where estado = 1");
+            while (rs.next()) {
+                cantidadOrdenes = rs.getInt(1);
+                // Total.setText(String.valueOf(TOTAL));
+            }
+            rs.close();
+            stmt.close();
+            cn.close();
+        } catch (Exception error) {
+            System.out.print(error);
+        }
+    }
+
+    public void SumaTotalGastos() {
+
+        DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+        Fecha = f.format(Fe.getDate());
+        try {
+            BDConexion conecta = new BDConexion();
+            Connection cn = conecta.getConexion();
+            java.sql.Statement stmt = cn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT sum(Precio) as TotalGasto FROM GASTOSDIARIOS WHERE date_format(FECHA,'%d/%m/%Y') ='" + Fecha + "'");
+            while (rs.next()) {
+                SUMATOTAL = rs.getDouble(1);
+                // Total.setText(String.valueOf(TOTAL));
+            }
+            rs.close();
+            stmt.close();
+            cn.close();
+        } catch (Exception error) {
+            System.out.print(error);
+        }
+        ListarGastos();
+    }
+
+    private void ListarGastos() {
+
+        ArrayList<InsertarProducto> result = BDIngresos.ListarGastosTotal(Fecha);
+        RecargarGas(result);
+    }
+
+    private void RecargarGas(ArrayList<InsertarProducto> list) {
+        Object[][] datos = new Object[list.size()][2];
+        int i = 0;
+        for (InsertarProducto t : list) {
+            datos[i][0] = t.getDescripcion();
+            datos[i][1] = t.getTotal();
+
+            i++;
+        }
+        Gast.setModel(new javax.swing.table.DefaultTableModel(
                 datos,
                 new String[]{
-                "GASTO","TOTAL"
-             })
-             {  
-                 @Override
-                 public boolean isCellEditable(int row, int column){
-                 return false;
+                    "GASTO", "TOTAL"
+                }) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
 
-             }
-             });
-             Gast.getColumnModel().getColumn(1).setCellRenderer(new TextAreaRenderer());
-             TableColumn columna1 = Gast.getColumn("GASTO");
-             columna1.setPreferredWidth(75);
-             TableColumn columna2 = Gast.getColumn("TOTAL");
-             columna2.setPreferredWidth(25);
-     }
-     
-     public void IngresoVentaDia() throws SQLException{
+            }
+        });
+        Gast.getColumnModel().getColumn(1).setCellRenderer(new TextAreaRenderer());
+        TableColumn columna1 = Gast.getColumn("GASTO");
+        columna1.setPreferredWidth(75);
+        TableColumn columna2 = Gast.getColumn("TOTAL");
+        columna2.setPreferredWidth(25);
+    }
+
+    public void IngresoVentaDia() throws SQLException {
         ValidarVentaDia();
         generarFechas();
-         
+
         BDConexion conecta = new BDConexion();
         PreparedStatement smtp;
         try (Connection con = conecta.getConexion()) {
             smtp = null;
-            if(ID_TOTAL == 0){
-            smtp =con.prepareStatement("CALL CUENTADIARIA('"+Fechain+" 02:00:00','"+Fechafin+" 02:00:00','"+Fechain+"',1,0)");
-            smtp.executeUpdate();
-            }
-            else{
-            smtp =con.prepareStatement("CALL CUENTADIARIA('"+Fechain+" 02:00:00','"+Fechafin+" 02:00:00','"+Fechain+"',2,"+ID_TOTAL+")");
+            if (ID_TOTAL == 0) {
+                smtp = con.prepareStatement("CALL CUENTADIARIA('" + Fechain + " 02:00:00','" + Fechafin + " 02:00:00','" + Fechain + "',1,0)");
+                smtp.executeUpdate();
+            } else {
+                smtp = con.prepareStatement("CALL CUENTADIARIA('" + Fechain + " 02:00:00','" + Fechafin + " 02:00:00','" + Fechain + "',2," + ID_TOTAL + ")");
                 System.out.println(smtp);
-            smtp.executeUpdate();
+                smtp.executeUpdate();
             }
         }
-        smtp.close(); 
+        smtp.close();
     }
-     
+
     public void ValidarVentaDia() {
-          
-         DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
-         Fecha = f.format(Fe.getDate());
-         System.out.println("FECHA DIA "+Fecha);
-            try {
-                BDConexion conecta = new BDConexion();
-                Connection cn = conecta.getConexion();
-                java.sql.Statement stmt = cn.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT ID_TOTAL FROM angels.totaldiario where date_format(fecha,'%d/%m/%Y') = '"+Fecha+"'");
-                while (rs.next()) {
-                      ID_TOTAL = rs.getInt(1);
-                      System.out.println("ID_TOTAL ="+ID_TOTAL);
-                }
-                rs.close();
-                stmt.close();
-                cn.close();
-            } catch (SQLException error) {
-                System.out.print(error);
+
+        DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+        Fecha = f.format(Fe.getDate());
+        System.out.println("FECHA DIA " + Fecha);
+        try {
+            BDConexion conecta = new BDConexion();
+            Connection cn = conecta.getConexion();
+            java.sql.Statement stmt = cn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT ID_TOTAL FROM angels.totaldiario where date_format(fecha,'%d/%m/%Y') = '" + Fecha + "'");
+            while (rs.next()) {
+                ID_TOTAL = rs.getInt(1);
+                System.out.println("ID_TOTAL =" + ID_TOTAL);
             }
-        } 
-    
+            rs.close();
+            stmt.close();
+            cn.close();
+        } catch (SQLException error) {
+            System.out.print(error);
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField EFECTIVO;
     private javax.swing.JTextField EFECTIVOMENOSGASTOS;
@@ -524,4 +553,25 @@ try {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+public void BuscarNoOrden() {
+        try {
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String fecha = sdf.format(Fe.getDate());
+            int ordendia = (int) (OrdenesDia.getModel().getValueAt(OrdenesDia.getSelectedRow(), 0));
+            BDConexion conecta = new BDConexion();
+            Connection cn = conecta.getConexion();
+            java.sql.Statement stmt = cn.createStatement();
+            ResultSet rs = stmt.executeQuery("select noorden from ordenes where ordendia = " + ordendia + " and  DATE(fecha) ='" + fecha+"'");
+            while (rs.next()) {
+                noorden = rs.getInt(1);
+            }
+            rs.close();
+            stmt.close();
+            cn.close();
+        } catch (Exception error) {
+            System.out.print(error);
+        }
+    }
+
 }

@@ -39,7 +39,7 @@ public class AceptarPedido extends javax.swing.JFrame {
     
     private void buscasucursal(){
         switch (sede) {
-            case "it" -> Sucursal = 1;
+            case "it" -> Sucursal = 2;
             case "AngelsParaiso" -> Sucursal = 2;
             case "AngelsSanLuis" -> Sucursal = 3;
             case "angelspalencia" -> Sucursal = 4;

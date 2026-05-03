@@ -80,8 +80,10 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="RECIBIR" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="GASTOS" min="-2" max="-2" attributes="0"/>
-                              <Component id="ADMINISTRAR" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="GASTOS" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ADMINISTRAR" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -304,7 +306,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel4" alignment="1" pref="201" max="32767" attributes="0"/>
+                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">

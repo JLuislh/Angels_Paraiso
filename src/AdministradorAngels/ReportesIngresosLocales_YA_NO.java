@@ -31,7 +31,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
  *
  * @author Jorge Lopez
  */
-public class ReportesIngresosLocales extends javax.swing.JPanel {
+public class ReportesIngresosLocales_YA_NO extends javax.swing.JPanel {
     int TipoSucursal;
     String FECHAINs;
     String FECHAFINs;
@@ -40,7 +40,7 @@ public class ReportesIngresosLocales extends javax.swing.JPanel {
     /**
      * Creates new form ReportesIngresosLocales
      */
-    public ReportesIngresosLocales() {
+    public ReportesIngresosLocales_YA_NO() {
         initComponents();
         Noordenes.requestFocus();
         ListarTotalesSucursales();
@@ -504,7 +504,7 @@ public class ReportesIngresosLocales extends javax.swing.JPanel {
         try {
             ingresoCuenta();
         } catch (SQLException ex) {
-            Logger.getLogger(ReportesIngresosLocales.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReportesIngresosLocales_YA_NO.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex);
         }
         

@@ -46,7 +46,7 @@ public class InicioPedido extends javax.swing.JFrame {
     
     private void buscasucursal(){
         switch (sede) {
-            case "it" -> Sucursal = 1;
+            case "it" -> Sucursal = 2;
             case "AngelsParaiso" -> Sucursal = 2;//ok
             case "AngelsSanLuis" -> Sucursal = 3;//ok
             case "angelspalencia" -> Sucursal = 4;//ok

@@ -70,6 +70,8 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
  String descripcion41;	String descripcion2_41;	 String Precio41; int codigo41;
  String descripcion42;	String descripcion2_42;	 String Precio42; int codigo42;
  String descripcion43;	String descripcion2_43;	 String Precio43; int codigo43;
+ String descripcion44;	String descripcion2_44;	 String Precio44; int codigo44;
+ String descripcion45;	String descripcion2_45;	 String Precio45; int codigo45;
  int noorden;
  int codigooreden;
  int existe = 0;
@@ -135,6 +137,8 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
        P41.setBackground(Original);
        P42.setBackground(Original);
        P43.setBackground(Original);
+       P44.setBackground(Original);
+       P45.setBackground(Original);
       
      }
     });
@@ -361,6 +365,8 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         BO29 = new javax.swing.JLabel();
         P30 = new ClassAngels.PanelRound();
         BO30 = new javax.swing.JLabel();
+        P45 = new ClassAngels.PanelRound();
+        BO45 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         P31 = new ClassAngels.PanelRound();
         BO31 = new javax.swing.JLabel();
@@ -388,6 +394,8 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         BO42 = new javax.swing.JLabel();
         P43 = new ClassAngels.PanelRound();
         BO43 = new javax.swing.JLabel();
+        P44 = new ClassAngels.PanelRound();
+        BO44 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(51, 153, 255));
         setPreferredSize(new java.awt.Dimension(1170, 380));
@@ -397,7 +405,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P1.setBackground(new java.awt.Color(204, 255, 102));
         P1.setMinimumSize(new java.awt.Dimension(100, 75));
-        P1.setPreferredSize(new java.awt.Dimension(100, 65));
+        P1.setPreferredSize(new java.awt.Dimension(98, 65));
         P1.setRoundBottomLeft(20);
         P1.setRoundBottomRight(20);
         P1.setRoundTopLeft(20);
@@ -416,7 +424,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P1.setLayout(P1Layout);
         P1Layout.setHorizontalGroup(
             P1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P1Layout.setVerticalGroup(
             P1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,7 +433,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P2.setBackground(new java.awt.Color(204, 255, 102));
         P2.setMinimumSize(new java.awt.Dimension(100, 75));
-        P2.setPreferredSize(new java.awt.Dimension(100, 65));
+        P2.setPreferredSize(new java.awt.Dimension(98, 65));
         P2.setRoundBottomLeft(20);
         P2.setRoundBottomRight(20);
         P2.setRoundTopLeft(20);
@@ -444,7 +452,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P2.setLayout(P2Layout);
         P2Layout.setHorizontalGroup(
             P2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P2Layout.setVerticalGroup(
             P2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,7 +461,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P3.setBackground(new java.awt.Color(204, 255, 102));
         P3.setMinimumSize(new java.awt.Dimension(100, 75));
-        P3.setPreferredSize(new java.awt.Dimension(100, 65));
+        P3.setPreferredSize(new java.awt.Dimension(98, 65));
         P3.setRoundBottomLeft(20);
         P3.setRoundBottomRight(20);
         P3.setRoundTopLeft(20);
@@ -472,7 +480,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P3.setLayout(P3Layout);
         P3Layout.setHorizontalGroup(
             P3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P3Layout.setVerticalGroup(
             P3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,7 +489,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P4.setBackground(new java.awt.Color(204, 255, 102));
         P4.setMinimumSize(new java.awt.Dimension(100, 75));
-        P4.setPreferredSize(new java.awt.Dimension(100, 65));
+        P4.setPreferredSize(new java.awt.Dimension(98, 65));
         P4.setRoundBottomLeft(20);
         P4.setRoundBottomRight(20);
         P4.setRoundTopLeft(20);
@@ -500,7 +508,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P4.setLayout(P4Layout);
         P4Layout.setHorizontalGroup(
             P4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P4Layout.setVerticalGroup(
             P4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -509,7 +517,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P5.setBackground(new java.awt.Color(204, 255, 102));
         P5.setMinimumSize(new java.awt.Dimension(100, 75));
-        P5.setPreferredSize(new java.awt.Dimension(100, 65));
+        P5.setPreferredSize(new java.awt.Dimension(98, 65));
         P5.setRoundBottomLeft(20);
         P5.setRoundBottomRight(20);
         P5.setRoundTopLeft(20);
@@ -528,7 +536,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P5.setLayout(P5Layout);
         P5Layout.setHorizontalGroup(
             P5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P5Layout.setVerticalGroup(
             P5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,7 +545,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P6.setBackground(new java.awt.Color(204, 255, 102));
         P6.setMinimumSize(new java.awt.Dimension(100, 75));
-        P6.setPreferredSize(new java.awt.Dimension(100, 65));
+        P6.setPreferredSize(new java.awt.Dimension(98, 65));
         P6.setRoundBottomLeft(20);
         P6.setRoundBottomRight(20);
         P6.setRoundTopLeft(20);
@@ -556,7 +564,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P6.setLayout(P6Layout);
         P6Layout.setHorizontalGroup(
             P6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P6Layout.setVerticalGroup(
             P6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -565,7 +573,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P7.setBackground(new java.awt.Color(204, 255, 102));
         P7.setMinimumSize(new java.awt.Dimension(100, 75));
-        P7.setPreferredSize(new java.awt.Dimension(100, 65));
+        P7.setPreferredSize(new java.awt.Dimension(98, 65));
         P7.setRoundBottomLeft(20);
         P7.setRoundBottomRight(20);
         P7.setRoundTopLeft(20);
@@ -584,7 +592,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P7.setLayout(P7Layout);
         P7Layout.setHorizontalGroup(
             P7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P7Layout.setVerticalGroup(
             P7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -593,13 +601,13 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P8.setBackground(new java.awt.Color(204, 255, 102));
         P8.setMinimumSize(new java.awt.Dimension(100, 75));
-        P8.setPreferredSize(new java.awt.Dimension(100, 65));
+        P8.setPreferredSize(new java.awt.Dimension(98, 65));
         P8.setRoundBottomLeft(20);
         P8.setRoundBottomRight(20);
         P8.setRoundTopLeft(20);
         P8.setRoundTopRight(20);
 
-        BO8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO8.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BO8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BO8.setText("8");
         BO8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -612,7 +620,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P8.setLayout(P8Layout);
         P8Layout.setHorizontalGroup(
             P8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P8Layout.setVerticalGroup(
             P8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -621,13 +629,13 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P9.setBackground(new java.awt.Color(204, 255, 102));
         P9.setMinimumSize(new java.awt.Dimension(100, 75));
-        P9.setPreferredSize(new java.awt.Dimension(100, 65));
+        P9.setPreferredSize(new java.awt.Dimension(98, 65));
         P9.setRoundBottomLeft(20);
         P9.setRoundBottomRight(20);
         P9.setRoundTopLeft(20);
         P9.setRoundTopRight(20);
 
-        BO9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO9.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BO9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BO9.setText("9");
         BO9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -640,7 +648,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P9.setLayout(P9Layout);
         P9Layout.setHorizontalGroup(
             P9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P9Layout.setVerticalGroup(
             P9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -649,7 +657,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P10.setBackground(new java.awt.Color(204, 255, 102));
         P10.setMinimumSize(new java.awt.Dimension(100, 75));
-        P10.setPreferredSize(new java.awt.Dimension(100, 65));
+        P10.setPreferredSize(new java.awt.Dimension(98, 65));
         P10.setRoundBottomLeft(20);
         P10.setRoundBottomRight(20);
         P10.setRoundTopLeft(20);
@@ -668,7 +676,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P10.setLayout(P10Layout);
         P10Layout.setHorizontalGroup(
             P10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P10Layout.setVerticalGroup(
             P10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -677,7 +685,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P11.setBackground(new java.awt.Color(204, 255, 102));
         P11.setMinimumSize(new java.awt.Dimension(100, 75));
-        P11.setPreferredSize(new java.awt.Dimension(100, 65));
+        P11.setPreferredSize(new java.awt.Dimension(98, 65));
         P11.setRoundBottomLeft(20);
         P11.setRoundBottomRight(20);
         P11.setRoundTopLeft(20);
@@ -696,7 +704,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P11.setLayout(P11Layout);
         P11Layout.setHorizontalGroup(
             P11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P11Layout.setVerticalGroup(
             P11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -705,7 +713,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P12.setBackground(new java.awt.Color(204, 255, 102));
         P12.setMinimumSize(new java.awt.Dimension(100, 75));
-        P12.setPreferredSize(new java.awt.Dimension(100, 65));
+        P12.setPreferredSize(new java.awt.Dimension(98, 65));
         P12.setRoundBottomLeft(20);
         P12.setRoundBottomRight(20);
         P12.setRoundTopLeft(20);
@@ -724,7 +732,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P12.setLayout(P12Layout);
         P12Layout.setHorizontalGroup(
             P12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P12Layout.setVerticalGroup(
             P12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -733,7 +741,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P13.setBackground(new java.awt.Color(204, 255, 102));
         P13.setMinimumSize(new java.awt.Dimension(100, 75));
-        P13.setPreferredSize(new java.awt.Dimension(100, 65));
+        P13.setPreferredSize(new java.awt.Dimension(98, 65));
         P13.setRoundBottomLeft(20);
         P13.setRoundBottomRight(20);
         P13.setRoundTopLeft(20);
@@ -752,7 +760,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P13.setLayout(P13Layout);
         P13Layout.setHorizontalGroup(
             P13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P13Layout.setVerticalGroup(
             P13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -761,7 +769,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P14.setBackground(new java.awt.Color(204, 255, 102));
         P14.setMinimumSize(new java.awt.Dimension(100, 75));
-        P14.setPreferredSize(new java.awt.Dimension(100, 65));
+        P14.setPreferredSize(new java.awt.Dimension(98, 65));
         P14.setRoundBottomLeft(20);
         P14.setRoundBottomRight(20);
         P14.setRoundTopLeft(20);
@@ -780,7 +788,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P14.setLayout(P14Layout);
         P14Layout.setHorizontalGroup(
             P14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P14Layout.setVerticalGroup(
             P14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -789,7 +797,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P15.setBackground(new java.awt.Color(204, 255, 102));
         P15.setMinimumSize(new java.awt.Dimension(100, 75));
-        P15.setPreferredSize(new java.awt.Dimension(100, 65));
+        P15.setPreferredSize(new java.awt.Dimension(98, 65));
         P15.setRoundBottomLeft(20);
         P15.setRoundBottomRight(20);
         P15.setRoundTopLeft(20);
@@ -808,7 +816,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P15.setLayout(P15Layout);
         P15Layout.setHorizontalGroup(
             P15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P15Layout.setVerticalGroup(
             P15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -817,7 +825,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P16.setBackground(new java.awt.Color(204, 255, 102));
         P16.setMinimumSize(new java.awt.Dimension(100, 75));
-        P16.setPreferredSize(new java.awt.Dimension(100, 65));
+        P16.setPreferredSize(new java.awt.Dimension(98, 65));
         P16.setRoundBottomLeft(20);
         P16.setRoundBottomRight(20);
         P16.setRoundTopLeft(20);
@@ -836,7 +844,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P16.setLayout(P16Layout);
         P16Layout.setHorizontalGroup(
             P16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P16Layout.setVerticalGroup(
             P16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -845,7 +853,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P17.setBackground(new java.awt.Color(204, 255, 102));
         P17.setMinimumSize(new java.awt.Dimension(100, 75));
-        P17.setPreferredSize(new java.awt.Dimension(100, 65));
+        P17.setPreferredSize(new java.awt.Dimension(98, 65));
         P17.setRoundBottomLeft(20);
         P17.setRoundBottomRight(20);
         P17.setRoundTopLeft(20);
@@ -864,7 +872,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P17.setLayout(P17Layout);
         P17Layout.setHorizontalGroup(
             P17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P17Layout.setVerticalGroup(
             P17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -873,7 +881,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P18.setBackground(new java.awt.Color(204, 255, 102));
         P18.setMinimumSize(new java.awt.Dimension(100, 75));
-        P18.setPreferredSize(new java.awt.Dimension(100, 65));
+        P18.setPreferredSize(new java.awt.Dimension(98, 65));
         P18.setRoundBottomLeft(20);
         P18.setRoundBottomRight(20);
         P18.setRoundTopLeft(20);
@@ -892,7 +900,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P18.setLayout(P18Layout);
         P18Layout.setHorizontalGroup(
             P18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P18Layout.setVerticalGroup(
             P18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -901,13 +909,13 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P19.setBackground(new java.awt.Color(204, 255, 102));
         P19.setMinimumSize(new java.awt.Dimension(100, 75));
-        P19.setPreferredSize(new java.awt.Dimension(100, 65));
+        P19.setPreferredSize(new java.awt.Dimension(98, 65));
         P19.setRoundBottomLeft(20);
         P19.setRoundBottomRight(20);
         P19.setRoundTopLeft(20);
         P19.setRoundTopRight(20);
 
-        BO19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO19.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BO19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BO19.setText("19");
         BO19.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -920,7 +928,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P19.setLayout(P19Layout);
         P19Layout.setHorizontalGroup(
             P19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P19Layout.setVerticalGroup(
             P19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -929,13 +937,13 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P20.setBackground(new java.awt.Color(204, 255, 102));
         P20.setMinimumSize(new java.awt.Dimension(100, 75));
-        P20.setPreferredSize(new java.awt.Dimension(100, 65));
+        P20.setPreferredSize(new java.awt.Dimension(98, 65));
         P20.setRoundBottomLeft(20);
         P20.setRoundBottomRight(20);
         P20.setRoundTopLeft(20);
         P20.setRoundTopRight(20);
 
-        BO20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO20.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BO20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BO20.setText("20");
         BO20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -948,7 +956,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P20.setLayout(P20Layout);
         P20Layout.setHorizontalGroup(
             P20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P20Layout.setVerticalGroup(
             P20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -957,7 +965,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P21.setBackground(new java.awt.Color(204, 255, 102));
         P21.setMinimumSize(new java.awt.Dimension(100, 75));
-        P21.setPreferredSize(new java.awt.Dimension(100, 65));
+        P21.setPreferredSize(new java.awt.Dimension(98, 65));
         P21.setRoundBottomLeft(20);
         P21.setRoundBottomRight(20);
         P21.setRoundTopLeft(20);
@@ -976,7 +984,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P21.setLayout(P21Layout);
         P21Layout.setHorizontalGroup(
             P21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P21Layout.setVerticalGroup(
             P21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -985,7 +993,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P22.setBackground(new java.awt.Color(204, 255, 102));
         P22.setMinimumSize(new java.awt.Dimension(100, 75));
-        P22.setPreferredSize(new java.awt.Dimension(100, 65));
+        P22.setPreferredSize(new java.awt.Dimension(98, 65));
         P22.setRoundBottomLeft(20);
         P22.setRoundBottomRight(20);
         P22.setRoundTopLeft(20);
@@ -1004,7 +1012,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P22.setLayout(P22Layout);
         P22Layout.setHorizontalGroup(
             P22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P22Layout.setVerticalGroup(
             P22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1013,7 +1021,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P23.setBackground(new java.awt.Color(204, 255, 102));
         P23.setMinimumSize(new java.awt.Dimension(100, 75));
-        P23.setPreferredSize(new java.awt.Dimension(100, 65));
+        P23.setPreferredSize(new java.awt.Dimension(98, 65));
         P23.setRoundBottomLeft(20);
         P23.setRoundBottomRight(20);
         P23.setRoundTopLeft(20);
@@ -1032,7 +1040,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P23.setLayout(P23Layout);
         P23Layout.setHorizontalGroup(
             P23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P23Layout.setVerticalGroup(
             P23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1041,7 +1049,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P24.setBackground(new java.awt.Color(204, 255, 102));
         P24.setMinimumSize(new java.awt.Dimension(100, 75));
-        P24.setPreferredSize(new java.awt.Dimension(100, 65));
+        P24.setPreferredSize(new java.awt.Dimension(98, 65));
         P24.setRoundBottomLeft(20);
         P24.setRoundBottomRight(20);
         P24.setRoundTopLeft(20);
@@ -1060,7 +1068,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P24.setLayout(P24Layout);
         P24Layout.setHorizontalGroup(
             P24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P24Layout.setVerticalGroup(
             P24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1069,7 +1077,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P25.setBackground(new java.awt.Color(204, 255, 102));
         P25.setMinimumSize(new java.awt.Dimension(100, 75));
-        P25.setPreferredSize(new java.awt.Dimension(100, 65));
+        P25.setPreferredSize(new java.awt.Dimension(98, 65));
         P25.setRoundBottomLeft(20);
         P25.setRoundBottomRight(20);
         P25.setRoundTopLeft(20);
@@ -1088,7 +1096,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P25.setLayout(P25Layout);
         P25Layout.setHorizontalGroup(
             P25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P25Layout.setVerticalGroup(
             P25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1097,7 +1105,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P26.setBackground(new java.awt.Color(204, 255, 102));
         P26.setMinimumSize(new java.awt.Dimension(100, 75));
-        P26.setPreferredSize(new java.awt.Dimension(100, 65));
+        P26.setPreferredSize(new java.awt.Dimension(98, 65));
         P26.setRoundBottomLeft(20);
         P26.setRoundBottomRight(20);
         P26.setRoundTopLeft(20);
@@ -1116,7 +1124,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P26.setLayout(P26Layout);
         P26Layout.setHorizontalGroup(
             P26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P26Layout.setVerticalGroup(
             P26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1125,7 +1133,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P27.setBackground(new java.awt.Color(204, 255, 102));
         P27.setMinimumSize(new java.awt.Dimension(100, 75));
-        P27.setPreferredSize(new java.awt.Dimension(100, 65));
+        P27.setPreferredSize(new java.awt.Dimension(98, 65));
         P27.setRoundBottomLeft(20);
         P27.setRoundBottomRight(20);
         P27.setRoundTopLeft(20);
@@ -1144,7 +1152,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P27.setLayout(P27Layout);
         P27Layout.setHorizontalGroup(
             P27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P27Layout.setVerticalGroup(
             P27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1153,7 +1161,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P28.setBackground(new java.awt.Color(204, 255, 102));
         P28.setMinimumSize(new java.awt.Dimension(100, 75));
-        P28.setPreferredSize(new java.awt.Dimension(100, 65));
+        P28.setPreferredSize(new java.awt.Dimension(98, 65));
         P28.setRoundBottomLeft(20);
         P28.setRoundBottomRight(20);
         P28.setRoundTopLeft(20);
@@ -1172,7 +1180,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P28.setLayout(P28Layout);
         P28Layout.setHorizontalGroup(
             P28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P28Layout.setVerticalGroup(
             P28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1181,14 +1189,15 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P29.setBackground(new java.awt.Color(204, 255, 102));
         P29.setMinimumSize(new java.awt.Dimension(100, 75));
-        P29.setPreferredSize(new java.awt.Dimension(100, 65));
+        P29.setPreferredSize(new java.awt.Dimension(98, 65));
         P29.setRoundBottomLeft(20);
         P29.setRoundBottomRight(20);
         P29.setRoundTopLeft(20);
         P29.setRoundTopRight(20);
 
-        BO29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO29.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BO29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BO29.setText("29");
         BO29.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BO29MouseClicked(evt);
@@ -1199,7 +1208,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P29.setLayout(P29Layout);
         P29Layout.setHorizontalGroup(
             P29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P29Layout.setVerticalGroup(
             P29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1208,14 +1217,15 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
 
         P30.setBackground(new java.awt.Color(204, 255, 102));
         P30.setMinimumSize(new java.awt.Dimension(100, 75));
-        P30.setPreferredSize(new java.awt.Dimension(100, 65));
+        P30.setPreferredSize(new java.awt.Dimension(98, 65));
         P30.setRoundBottomLeft(20);
         P30.setRoundBottomRight(20);
         P30.setRoundTopLeft(20);
         P30.setRoundTopRight(20);
 
-        BO30.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO30.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         BO30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BO30.setText("30");
         BO30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BO30MouseClicked(evt);
@@ -1226,11 +1236,39 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
         P30.setLayout(P30Layout);
         P30Layout.setHorizontalGroup(
             P30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BO30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(BO30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         P30Layout.setVerticalGroup(
             P30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(BO30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        P45.setBackground(new java.awt.Color(204, 255, 102));
+        P45.setMinimumSize(new java.awt.Dimension(100, 75));
+        P45.setPreferredSize(new java.awt.Dimension(98, 65));
+        P45.setRoundBottomLeft(20);
+        P45.setRoundBottomRight(20);
+        P45.setRoundTopLeft(20);
+        P45.setRoundTopRight(20);
+
+        BO45.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BO45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BO45.setText("45");
+        BO45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BO45MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P45Layout = new javax.swing.GroupLayout(P45);
+        P45.setLayout(P45Layout);
+        P45Layout.setHorizontalGroup(
+            P45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BO45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        P45Layout.setVerticalGroup(
+            P45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BO45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1242,97 +1280,98 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(P12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(P23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(P29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(P45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(P8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(P15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(P14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(P13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(P12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(P16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(P8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(P15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(P20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(P23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1340,8 +1379,9 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
                     .addComponent(P27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(P30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(51, 153, 255));
@@ -1711,6 +1751,34 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
             .addComponent(BO43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        P44.setBackground(new java.awt.Color(204, 255, 102));
+        P44.setMinimumSize(new java.awt.Dimension(100, 75));
+        P44.setPreferredSize(new java.awt.Dimension(75, 70));
+        P44.setRoundBottomLeft(20);
+        P44.setRoundBottomRight(20);
+        P44.setRoundTopLeft(20);
+        P44.setRoundTopRight(20);
+
+        BO44.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        BO44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BO44.setText("44");
+        BO44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BO44MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout P44Layout = new javax.swing.GroupLayout(P44);
+        P44.setLayout(P44Layout);
+        P44Layout.setHorizontalGroup(
+            P44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BO44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        P44Layout.setVerticalGroup(
+            P44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BO44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -1742,7 +1810,9 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
                 .addComponent(P42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(P43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(P44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1760,22 +1830,17 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
                     .addComponent(P39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(P32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(P32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(P44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1783,7 +1848,7 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleName("");
@@ -2294,11 +2359,39 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
     }//GEN-LAST:event_BO28MouseClicked
 
     private void BO29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BO29MouseClicked
-        // LIBRE
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo29;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P29.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+          }else{
+            codigooreden = codigo29;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P29.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+       }
     }//GEN-LAST:event_BO29MouseClicked
 
     private void BO30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BO30MouseClicked
-        // LIBRE
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo30;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P30.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+          }else{
+            codigooreden = codigo30;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P30.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+        }
     }//GEN-LAST:event_BO30MouseClicked
 
     private void BO31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BO31MouseClicked
@@ -2534,6 +2627,42 @@ String descripcion1;	String descripcion2_1;	 String Precio1;  int codigo1;
             timer.start();
        }
     }//GEN-LAST:event_BO43MouseClicked
+
+    private void BO44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BO44MouseClicked
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo44;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P44.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+          }else{
+            codigooreden = codigo44;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P44.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+       }
+    }//GEN-LAST:event_BO44MouseClicked
+
+    private void BO45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BO45MouseClicked
+      if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo45;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P45.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+          }else{
+            codigooreden = codigo45;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P45.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+       }
+    }//GEN-LAST:event_BO45MouseClicked
 private void nombres(){
     ArrayList<EtiquetasClass> result = EtiquetasClass.ListaEtiquetasBotellas();
         for (int i = 0; i < result.size(); i++) {
@@ -2623,12 +2752,12 @@ private void nombres(){
             else if (218== codigo){
              descripcion28 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_28 = result.get(i).getDescripcion2().toUpperCase(); Precio28 = result.get(i).getPrecio();codigo28 = result.get(i).getCodigo();
             }
-           /* else if (218== codigo){
-             descripcion29 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_28 = result.get(i).getDescripcion2().toUpperCase(); Precio28 = result.get(i).getPrecio();codigo28 = result.get(i).getCodigo();
+            else if (274== codigo){
+             descripcion29 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_29 = result.get(i).getDescripcion2().toUpperCase(); Precio29 = result.get(i).getPrecio();codigo29 = result.get(i).getCodigo();
             }
-            else if (218== codigo){
-             descripcion30 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_28 = result.get(i).getDescripcion2().toUpperCase(); Precio28 = result.get(i).getPrecio();codigo28 = result.get(i).getCodigo();
-            }*/
+            else if (278== codigo){
+             descripcion30 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_30 = result.get(i).getDescripcion2().toUpperCase(); Precio30 = result.get(i).getPrecio();codigo30 = result.get(i).getCodigo();
+            }
             else if (233== codigo){
              descripcion31 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_31 = result.get(i).getDescripcion2().toUpperCase(); Precio31 = result.get(i).getPrecio();codigo31 = result.get(i).getCodigo();
             }
@@ -2667,6 +2796,12 @@ private void nombres(){
             }
             else if (230== codigo){
              descripcion43 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_43 = result.get(i).getDescripcion2().toUpperCase(); Precio43 = result.get(i).getPrecio();codigo43 = result.get(i).getCodigo();
+            }
+            else if (282== codigo){
+             descripcion44 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_44 = result.get(i).getDescripcion2().toUpperCase(); Precio44 = result.get(i).getPrecio();codigo44 = result.get(i).getCodigo();
+            }
+            else if (281== codigo){
+             descripcion45 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_45 = result.get(i).getDescripcion2().toUpperCase(); Precio45 = result.get(i).getPrecio();codigo45 = result.get(i).getCodigo();
             }
         }
   }
@@ -2710,6 +2845,8 @@ private void nombres(){
     private javax.swing.JLabel BO41;
     private javax.swing.JLabel BO42;
     private javax.swing.JLabel BO43;
+    private javax.swing.JLabel BO44;
+    private javax.swing.JLabel BO45;
     private javax.swing.JLabel BO5;
     private javax.swing.JLabel BO6;
     private javax.swing.JLabel BO7;
@@ -2753,6 +2890,8 @@ private void nombres(){
     private ClassAngels.PanelRound P41;
     private ClassAngels.PanelRound P42;
     private ClassAngels.PanelRound P43;
+    private ClassAngels.PanelRound P44;
+    private ClassAngels.PanelRound P45;
     private ClassAngels.PanelRound P5;
     private ClassAngels.PanelRound P6;
     private ClassAngels.PanelRound P7;
@@ -2818,10 +2957,10 @@ private void nombres(){
         BO27.setText(texto27);
         String texto28 ="<html><center><body>"+descripcion28+"<br>"+descripcion2_28+"<br><font color='RED'>Q"+Precio28+"</font></body></center></html>";
         BO28.setText(texto28);
-        /*String texto29 ="<html><center><body>"+descripcion29+"<br>"+descripcion2_29+"<br><font color='RED'>Q"+Precio29+"</font></body></center></html>";
+        String texto29 ="<html><center><body>"+descripcion29+"<br>"+descripcion2_29+"<br><font color='RED'>Q"+Precio29+"</font></body></center></html>";
         BO29.setText(texto29);
         String texto30 ="<html><center><body>"+descripcion30+"<br>"+descripcion2_30+"<br><font color='RED'>Q"+Precio30+"</font></body></center></html>";
-        BO30.setText(texto30);*/
+        BO30.setText(texto30);
         String texto31 ="<html><center><body>"+descripcion31+"<br>"+descripcion2_31+"<br><font color='RED'>Q"+Precio31+"</font></body></center></html>";
         BO31.setText(texto31);
         String texto32 ="<html><center><body>"+descripcion32+"<br>"+descripcion2_32+"<br><font color='RED'>Q"+Precio32+"</font></body></center></html>";
@@ -2848,5 +2987,10 @@ private void nombres(){
         BO42.setText(texto42);
         String texto43 ="<html><center><body>"+descripcion43+"<br>"+descripcion2_43+"<br><font color='RED'>Q"+Precio43+"</font></body></center></html>";
         BO43.setText(texto43);
+        
+        String texto44 ="<html><center><body>"+descripcion44+"<br>"+descripcion2_44+"<br><font color='RED'>Q"+Precio44+"</font></body></center></html>";
+        BO44.setText(texto44);
+        String texto45 ="<html><center><body>"+descripcion45+"<br>"+descripcion2_45+"<br><font color='RED'>Q"+Precio45+"</font></body></center></html>";
+        BO45.setText(texto45);
 }
 }

@@ -245,7 +245,7 @@ public class OrdenesMeseros extends javax.swing.JFrame {
          crear();
          MesasMeseros F = new MesasMeseros(noorden);
          F.setVisible(true);
-        this.dispose();
+         this.dispose();
     }//GEN-LAST:event_nuevaMouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked

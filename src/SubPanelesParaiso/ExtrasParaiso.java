@@ -72,6 +72,8 @@ public class ExtrasParaiso extends javax.swing.JPanel {
  String descripcion42;	String descripcion2_42;	 String Precio42; int codigo42;
  String descripcion43;	String descripcion2_43;	 String Precio43; int codigo43;
  String descripcion44;	String descripcion2_44;	 String Precio44; int codigo44;
+ String descripcion45;	String descripcion2_45;	 String Precio45; int codigo45;
+ String descripcion46;	String descripcion2_46;	 String Precio46; int codigo46;
  
  String MICHE1_1;String MICHE2_1;String PrecioM1; int codigoM1;
  String MICHE1_2;String MICHE2_2;String PrecioM2; int codigoM2;
@@ -154,6 +156,8 @@ public class ExtrasParaiso extends javax.swing.JPanel {
        P42.setBackground(Original);
        P43.setBackground(Original);
        P44.setBackground(Original);
+       P45.setBackground(Original);
+       P46.setBackground(Original);
        
        MICHE1.setBackground(Original);
        MICHE2.setBackground(Original);
@@ -1271,6 +1275,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
 
         EX45.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX45.setText("45");
         EX45.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 EX45MouseClicked(evt);
@@ -1297,6 +1302,7 @@ public class ExtrasParaiso extends javax.swing.JPanel {
 
         EX46.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         EX46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EX46.setText("46");
         EX46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 EX46MouseClicked(evt);
@@ -3276,11 +3282,39 @@ public class ExtrasParaiso extends javax.swing.JPanel {
     }//GEN-LAST:event_EX44MouseClicked
 
     private void EX45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX45MouseClicked
-        // TODO add your handling code here:
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo45;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P45.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+        }else{
+            codigooreden = codigo45;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P45.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+        }
     }//GEN-LAST:event_EX45MouseClicked
 
     private void EX46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX46MouseClicked
-        // TODO add your handling code here:
+        if ((evt.getModifiers() & 4) !=0){
+            codigooreden= codigo46;
+            BuscarExistencia();
+            if(existe >= 2){UpdateCantidadMenos();} else if (existe == 1){eliminarProducto();} else{JOptionPane.showMessageDialog(this, "Aun no tienes agregado este producto");}
+            P46.setBackground(Color.darkGray);
+            timer.setRepeats(false);
+            timer.start();
+        }else{
+            codigooreden = codigo46;
+            BuscarExistencia();
+            if(existe == 0){InsertarProductoPedido();}else{UpdateCantidad();}
+            P46.setBackground(Color.GREEN);
+            timer.setRepeats(false);
+            timer.start();
+        }
     }//GEN-LAST:event_EX46MouseClicked
 
     private void EX47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EX47MouseClicked
@@ -3380,7 +3414,12 @@ public class ExtrasParaiso extends javax.swing.JPanel {
             else if (244== codigo){
              descripcion44 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_44 = result.get(i).getDescripcion2().toUpperCase(); Precio44 = result.get(i).getPrecio();codigo44 = result.get(i).getCodigo();
             }
-           
+            else if (276== codigo){
+             descripcion45 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_45 = result.get(i).getDescripcion2().toUpperCase(); Precio45 = result.get(i).getPrecio();codigo45 = result.get(i).getCodigo();
+            }
+            else if (279== codigo){
+             descripcion46 = result.get(i).getDescripcion1().toUpperCase(); descripcion2_46 = result.get(i).getDescripcion2().toUpperCase(); Precio46 = result.get(i).getPrecio();codigo46 = result.get(i).getCodigo();
+            }
             ///////////////////////////MICHE
             else if (246== codigo){
              MICHE1_1 = result.get(i).getDescripcion1().toUpperCase(); MICHE2_1 = result.get(i).getDescripcion2().toUpperCase(); PrecioM1 = result.get(i).getPrecio(); codigoM1 = result.get(i).getCodigo();
@@ -3699,6 +3738,10 @@ public class ExtrasParaiso extends javax.swing.JPanel {
         EX43.setText(texto43);
         String texto44 ="<html><center><body>"+descripcion44+"<br>"+descripcion2_44+"<br><font color='RED'>Q"+Precio44+"</font></body></center></html>";
         EX44.setText(texto44);
+        String texto45 ="<html><center><body>"+descripcion45+"<br>"+descripcion2_45+"<br><font color='RED'>Q"+Precio45+"</font></body></center></html>";
+        EX45.setText(texto45);
+        String texto46 ="<html><center><body>"+descripcion46+"<br>"+descripcion2_46+"<br><font color='RED'>Q"+Precio46+"</font></body></center></html>";
+        EX46.setText(texto46);
         //////////////////////////////////MICHE/////////////////////////////////////////
         
         String M1 ="<html><center><body>"+MICHE1_1+"<br>"+MICHE2_1+"<br><font color='RED'>Q"+PrecioM1+"</font></body></center></html>";

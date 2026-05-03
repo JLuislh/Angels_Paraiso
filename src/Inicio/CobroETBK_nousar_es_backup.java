@@ -34,7 +34,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
  *
  * @author jluis
  */
-public class CobroET extends javax.swing.JFrame {
+public class CobroETBK_nousar_es_backup extends javax.swing.JFrame {
 
     int cobro;
     int noorden;
@@ -46,13 +46,14 @@ public class CobroET extends javax.swing.JFrame {
     /**
      * Creates new form CobroET
      */
-    public CobroET(double a, int b) {
+    public CobroETBK_nousar_es_backup(double a, int b) {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
         }
         initComponents();
+        llenaEmpleados();
         setLocationRelativeTo(null);
         noorden = b;
         BuscarOrdenDia();
@@ -62,6 +63,17 @@ public class CobroET extends javax.swing.JFrame {
         Canttarjeta.setEditable(false);
         total.setText(String.valueOf(a));
         Orden.setText(String.valueOf(ordendia));
+
+       Empleados.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            EmpleadoItem seleccionado = (EmpleadoItem) Empleados.getSelectedItem();
+            if (seleccionado != null) {
+                 codigoEmpleado = seleccionado.getCodigo();
+                System.out.println("Empleado seleccionado: " + codigoEmpleado);
+            }
+        }
+    });
 
     }
 
@@ -78,7 +90,7 @@ public class CobroET extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "ERROr = " + ex);
         }
         imprimirCobrodividido();
-        Empleados F = new Empleados(noorden);
+        Ordenes F = new Ordenes();
         F.setVisible(true);
         this.dispose();
 
@@ -98,7 +110,7 @@ public class CobroET extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "ERROr = " + ex);
         }
         imprimirCobrodividido();
-        Empleados F = new Empleados(noorden);
+        Ordenes F = new Ordenes();
         F.setVisible(true);
         this.dispose();
     }
@@ -150,7 +162,31 @@ public class CobroET extends javax.swing.JFrame {
         }
     }
 
+    public void llenaEmpleados() {
+        Empleados.removeAllItems();
+        Empleados.addItem(new EmpleadoItem(0, "SELECCIONAR...")); // ítem inicial
 
+        try {
+            BDConexion conecta = new BDConexion();
+            Connection cn = conecta.getConexion();
+            java.sql.Statement stmt = cn.createStatement();
+
+            ResultSet rs = stmt.executeQuery("SELECT codigo, nombre FROM empleados WHERE estado = 1");
+
+            while (rs.next()) {
+                codigo = rs.getInt("codigo");
+                String nombre = rs.getString("nombre");
+
+                Empleados.addItem(new EmpleadoItem(codigo, nombre));
+            }
+
+            cn.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al cargar empleados: " + e.getMessage());
+        }
+        Empleados.setSelectedIndex(0);
+    }
 
     /*
     private void imprimirCobrodividido() {
@@ -238,6 +274,8 @@ public class CobroET extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         CantEfectivo = new javax.swing.JTextField();
         cobrar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        Empleados = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -336,6 +374,12 @@ public class CobroET extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("ATENDIDO POR");
+
+        Empleados.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -352,7 +396,9 @@ public class CobroET extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Canttarjeta)
-                            .addComponent(CantEfectivo))))
+                            .addComponent(CantEfectivo)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Empleados, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -362,11 +408,15 @@ public class CobroET extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Canttarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CantEfectivo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Empleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addComponent(cobrar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addGap(11, 11, 11))
         );
@@ -510,7 +560,7 @@ public class CobroET extends javax.swing.JFrame {
 
     private void cobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cobrarActionPerformed
        
-        if (cobro > 0) {
+        if (cobro > 0 && !Empleados.getSelectedItem().toString().equalsIgnoreCase("SELECCIONAR...")) {
             if (cobro == 3) {
                 if (Double.parseDouble(Canttarjeta.getText()) > 0 && Double.parseDouble(CantEfectivo.getText()) > 0) {
                     cobrarOrdenET();
@@ -528,7 +578,7 @@ public class CobroET extends javax.swing.JFrame {
                 }
             }
         } else {
-            JOptionPane.showMessageDialog(null, "SELECCIONAR UN METODO DE PAGO");
+            JOptionPane.showMessageDialog(null, "SELECCIONAR UN METODO DE PAGO O QUIEN ATENDIO");
         }
 
     }//GEN-LAST:event_cobrarActionPerformed
@@ -559,14 +609,17 @@ public class CobroET extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CobroET.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobroETBK_nousar_es_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CobroET.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobroETBK_nousar_es_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CobroET.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobroETBK_nousar_es_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CobroET.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CobroETBK_nousar_es_backup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -581,6 +634,7 @@ public class CobroET extends javax.swing.JFrame {
     private javax.swing.JTextField CantEfectivo;
     private javax.swing.JTextField Canttarjeta;
     private javax.swing.JButton Efectivo;
+    private javax.swing.JComboBox<EmpleadoItem> Empleados;
     private javax.swing.JTextField Orden;
     private javax.swing.JButton TYE;
     private javax.swing.JButton Tarjeta;
@@ -591,6 +645,7 @@ public class CobroET extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField total;
