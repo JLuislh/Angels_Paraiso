@@ -80,7 +80,9 @@
                       <Component id="Menu6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Menu7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="Menu9" pref="96" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Menu8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -96,6 +98,7 @@
                   <Component id="Menu6" min="-2" max="-2" attributes="0"/>
                   <Component id="Menu7" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="Menu8" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Menu9" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -106,7 +109,7 @@
                   <Color blue="99" green="cc" red="ff" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -145,7 +148,7 @@
                   <Color blue="ff" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -154,7 +157,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo2" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo2" alignment="0" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -184,7 +187,7 @@
                   <Color blue="cc" green="cc" red="0" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -193,7 +196,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo3" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo3" alignment="0" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -223,7 +226,7 @@
                   <Color blue="cc" green="ff" red="99" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -232,7 +235,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo4" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo4" alignment="0" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -262,7 +265,7 @@
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -271,7 +274,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo5" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo5" alignment="0" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -301,7 +304,7 @@
                   <Color blue="ff" green="99" red="33" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -310,7 +313,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo6" alignment="0" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo6" alignment="0" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -340,7 +343,7 @@
                   <Color blue="66" green="cc" red="ff" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -349,7 +352,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo8" alignment="1" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo8" alignment="1" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -379,7 +382,7 @@
                   <Color blue="0" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[140, 50]"/>
+                  <Dimension value="[125, 50]"/>
                 </Property>
                 <Property name="roundTopLeft" type="int" value="20"/>
                 <Property name="roundTopRight" type="int" value="20"/>
@@ -388,7 +391,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Titulo7" alignment="1" pref="140" max="32767" attributes="0"/>
+                      <Component id="Titulo7" alignment="1" pref="125" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -411,6 +414,49 @@
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Titulo7MouseClicked"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="ClassAngels.PanelRound" name="Menu9">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="ff" type="rgb"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[125, 50]"/>
+                </Property>
+                <Property name="roundTopLeft" type="int" value="20"/>
+                <Property name="roundTopRight" type="int" value="20"/>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Titulo9" alignment="0" pref="96" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="Titulo9" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="Titulo9">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="12" style="1"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="SOLO"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Titulo9MouseClicked"/>
                   </Events>
                 </Component>
               </SubComponents>
