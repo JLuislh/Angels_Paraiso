@@ -68,7 +68,6 @@ public class MenuParaLlevar extends javax.swing.JFrame {
         String texto9 = "<html><center><body>SOLO<br>LLEVAR</body></center></html>";
         Titulo9.setText(texto9);
         ListarProductosPedidos();
-        
     }
     
     private void BuscarOrdenDia() {
