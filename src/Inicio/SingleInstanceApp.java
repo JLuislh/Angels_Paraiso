@@ -3,42 +3,68 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Inicio;
-import ClassAngels.SucursalUtil;
-import Inventarios.SincronizadorInventario;
+
+import java.awt.Desktop;
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.URI;
+import java.time.LocalDate;
+import javax.swing.JOptionPane;
 
 public class SingleInstanceApp {
 
-    private static final int PORT = 1000; // Puerto único para tu aplicación
+    private static final int PORT = 1000;
+    private static final LocalDate FECHA_CADUCIDAD = LocalDate.of(2026, 8, 1);
+    private static final String URL_NUEVO_SISTEMA = "https://restauranteangelspos.duckdns.org/";
 
     public static void main(String[] args) {
-        // Intentar abrir un socket en el puerto único
+
         try (ServerSocket socket = new ServerSocket(PORT)) {
-            System.out.println("Aplicación iniciada. No hay otras instancias en ejecución.");
 
-            // 🔹 Registrar shutdown hook UNA VEZ (solo al salir)
-          /*  Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                try {
-                    System.out.println("🔄 Sincronizando con API antes de salir...");
-                    SincronizadorInventario.sincronizar(SucursalUtil.obtenerSucursal());
-                } catch (Exception e) {
-                    System.err.println("Error al sincronizar al salir: " + e.getMessage());
+            LocalDate hoy = LocalDate.now();
+
+            // Si ya llegó el 1 de agosto o después
+            if (!hoy.isBefore(FECHA_CADUCIDAD)) {
+
+                Object[] opciones = {
+                    "Ir al nuevo sistema",
+                    "Salir"
+                };
+
+                int opcion = JOptionPane.showOptionDialog(
+                        null,
+                        "Este sistema ha caducado.\n\n"
+                        + "A partir del 1 de agosto deberá utilizar la nueva versión.",
+                        "Sistema Caducado",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.ERROR_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[0]);
+
+                if (opcion == 0) {
+                    try {
+                        Desktop.getDesktop().browse(new URI(URL_NUEVO_SISTEMA));
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
                 }
-            }));*/
 
-            // 🔹 Lanza la ventana principal
+                System.exit(0);
+            }
+
+            // Aviso antes de la fecha de caducidad
+            JOptionPane.showMessageDialog(
+                    null,
+                    "AVISO IMPORTANTE\n\n"
+                    + "Este sistema dejará de funcionar el 1 de agosto.\n\n"
+                    + "A partir de esa fecha deberá utilizar la nueva versión:\n"
+                    + URL_NUEVO_SISTEMA,
+                    "Aviso",
+                    JOptionPane.WARNING_MESSAGE);
+
             iniciarAplicacion();
 
-            // 🔹 Sincronización al iniciar
-           /* try {
-                System.out.println("🔄 Sincronizando con API al iniciar...");
-                SincronizadorInventario.sincronizar(SucursalUtil.obtenerSucursal());
-            } catch (Exception e) {
-                System.err.println("Error al sincronizar al iniciar: " + e.getMessage());
-            }*/
-
-            // Bloquea el hilo principal para mantener la aplicación viva
             synchronized (SingleInstanceApp.class) {
                 try {
                     SingleInstanceApp.class.wait();
@@ -48,17 +74,18 @@ public class SingleInstanceApp {
             }
 
         } catch (IOException e) {
-            // Si no se puede abrir el socket, otra instancia ya está corriendo
-            System.err.println("Ya hay una instancia de la aplicación en ejecución.");
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Ya existe una instancia del sistema en ejecución.",
+                    "Aviso",
+                    JOptionPane.INFORMATION_MESSAGE);
             System.exit(1);
         }
     }
 
     private static void iniciarAplicacion() {
         Ordenes ventana = new Ordenes();
-        // Esto asegura que al cerrar la ventana principal se termine el proceso
         ventana.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         ventana.setVisible(true);
-        System.out.println("Tu aplicación está en funcionamiento...");
     }
 }

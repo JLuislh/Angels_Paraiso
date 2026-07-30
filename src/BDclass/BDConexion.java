@@ -15,8 +15,8 @@ import javax.swing.JOptionPane;
  */
 public class BDConexion {
 
-   //public static final String URL = "jdbc:mysql://26.74.177.186:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso
-   public static final String URL = "jdbc:mysql://26.84.78.101:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso la de resi
+   public static final String URL = "jdbc:mysql://26.74.177.186:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso
+   //public static final String URL = "jdbc:mysql://26.84.78.101:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso la de resi
    //public static final String URL = "jdbc:mysql://192.168.0.104:3306/angels?useTimezone=true&serverTimezone=UTC";//Maquina Angels El Paraiso
    //public static final String URL = "jdbc:mysql://172.26.10.232:3306/angels?useTimezone=true&serverTimezone=America/Guatemala";//base en oracle
    public static final String USER =   "angels";//"SuperElrey";
